@@ -21,20 +21,6 @@
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<!-- Breadcrumbs Start -->
-<div class="rs-breadcrumbs img1">
-  <div class="breadcrumbs-inner text-center">
-    <h1 class="page-title">@if(@$child_menu_id->name) {{ @$child_menu_id->name }} @elseif(@$sub_menu_id->name) {{ @$sub_menu_id->name }} @else {{ @$parent_menu_id->name }} @endif</h1>
-    <ul>
-      <li title="Safety Guard">
-        <a class="active" href="{{route('home')}}">Home</a>
-      </li>
-      <li>@if(@$child_menu_id->name) {{ @$child_menu_id->name }} @elseif(@$sub_menu_id->name) {{ @$sub_menu_id->name }} @else {{ @$parent_menu_id->name }} @endif</li>
-    </ul>
-  </div>
-</div>
-<!-- Breadcrumbs End -->
-
 <div class="container th-container2">
     <div class="breadcumb-wrapper  " data-bg-src="/assets/img/breadcumb/breadcumb-bg-2.jpg">
         <h1 class="breadcumb-title">@if(@$child_menu_id->name) {{ @$child_menu_id->name }} @elseif(@$sub_menu_id->name) {{ @$sub_menu_id->name }} @else {{ @$parent_menu_id->name }} @endif</h1>

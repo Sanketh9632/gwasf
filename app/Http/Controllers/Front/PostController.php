@@ -419,7 +419,9 @@ class PostController extends Controller
 
     $recent_news = Post::where('parent_menu_id', @$news_menu_id->id)->orderBy('event_date', 'desc')->whereNull('deleted_at')->get();
 
-    return view('front.all-news', compact('recent_news', 'news_menu_id'));
+    $categories = Category::all();
+
+    return view('front.all-news', compact('recent_news', 'news_menu_id', 'categories'));
   }
 
   public function getNewsInDetail($news_slug = null)

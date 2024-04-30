@@ -1,7 +1,7 @@
 @extends('front.layout')
 
 @section('meta')
-@section('title', 'Safety Guard | Case Studies')
+@section('title', 'Safety Guard | Blog')
 <meta name="author" content="Safety Guard">
 <meta name="description" content="">
 <meta name="keywords" content="">
@@ -16,10 +16,10 @@
 
 <div class="container th-container2">
         <div class="breadcumb-wrapper  " data-bg-src="/assets/img/breadcumb/breadcumb-bg.jpg">
-            <h1 class="breadcumb-title">Latest Posts</h1>
+            <h1 class="breadcumb-title">Latest Blogs</h1>
             <ul class="breadcumb-menu">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li>Latest Posts</li>
+                <li>Latest Blogs</li>
             </ul>
         </div>
     </div>
@@ -37,7 +37,7 @@
                     <div class="blog-content">
                         <div class="blog-meta">
                             <!-- <a href="blog.html"><i class="fas fa-user-circle"></i>by Admin</a> -->
-                            <a href="blog.html"><i class="fas fa-calendar-alt"></i>{{@$news->event_date->format(M d, Y)}}</a>
+                            <a href="blog.html"><i class="fas fa-calendar-alt"></i>{{@$news->event_date->format('M d, Y')}}</a>
                             <a href="blog.html"><i class="fas fa-tags"></i>{{@$news->category->title}}</a>
                         </div>
                         <h2 class="blog-title"><a href="{{route('blog-detail', [$news->slug])}}">{{@$news->title}}</a></h2>
@@ -130,7 +130,7 @@
 
                     <div class="th-pagination  ">
 
-                        {{ @$recent_news->links() }} 
+                        {{-- {{ @$recent_news->links() }}  --}}
                             
                         <ul>
                             <li><a href="blog.html">1</a></li>

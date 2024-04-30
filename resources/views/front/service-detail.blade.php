@@ -96,7 +96,7 @@
                                 <a href="blog.html">Interdisciplinary entities</a>
                             </li>
                             <li>
-                                <a href="blog.html">Artraz Everything</a>
+                                <a href="blog.html">Safety Guard Everything</a>
                             </li>
                         </ul>
                     </div> -->

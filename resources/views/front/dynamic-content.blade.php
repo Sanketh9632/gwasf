@@ -22,7 +22,7 @@
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <div class="container th-container2">
-    <div class="breadcumb-wrapper  " data-bg-src="/assets/img/breadcumb/breadcumb-bg-2.jpg">
+    <div class="breadcumb-wrapper  " data-bg-src="{{@$dynamic_contents->banner_image ?  @$dynamic_contents->banner_image : '/assets/img/breadcumb/breadcumb-bg-2.jpg'}}">
         <h1 class="breadcumb-title">@if(@$child_menu_id->name) {{ @$child_menu_id->name }} @elseif(@$sub_menu_id->name) {{ @$sub_menu_id->name }} @else {{ @$parent_menu_id->name }} @endif</h1>
         <ul class="breadcumb-menu">
             <li><a href="{{route('home')}}">Home</a></li>
@@ -60,7 +60,7 @@ About Area
                 
                 <p class="mb-4">Eraclis Papachristou Architects is one of the most established architectural offices in Cyprus. This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion of various projects, especially in the last ten years.</p>
                 <p class="mb-40">This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion.</p>
-                <a href="about.html" class="th-btn"><span class="line left"></span> About Us <span class="line"></span></a>
+                <a href="/about-us" class="th-btn"><span class="line left"></span> About Us <span class="line"></span></a>
             </div>
         </div>
     </div>
@@ -183,7 +183,7 @@ Team Area
                 <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="team-card style2">
                         <p class="team-desig">Architecture Designer</p>
-                        <h3 class="h5 team-title"><a href="team-details.html">Kevin Martin</a></h3>
+                        <h3 class="h5 team-title"><a href="#">Kevin Martin</a></h3>
                         <div class="th-social">
                             <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
                             <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
@@ -198,7 +198,7 @@ Team Area
                 <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-card style2">
                         <p class="team-desig">Interior Designer</p>
-                        <h3 class="h5 team-title"><a href="team-details.html">Jonas Malini</a></h3>
+                        <h3 class="h5 team-title"><a href="#">Jonas Malini</a></h3>
                         <div class="th-social">
                             <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
                             <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
@@ -213,7 +213,7 @@ Team Area
                 <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="team-card style2">
                         <p class="team-desig">3D Autocad Designer</p>
-                        <h3 class="h5 team-title"><a href="team-details.html">Aiden Samuel</a></h3>
+                        <h3 class="h5 team-title"><a href="#">Aiden Samuel</a></h3>
                         <div class="th-social">
                             <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
                             <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
@@ -228,7 +228,7 @@ Team Area
                 <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-card style2">
                         <p class="team-desig">Interior Designer</p>
-                        <h3 class="h5 team-title"><a href="team-details.html">Andrew Maria</a></h3>
+                        <h3 class="h5 team-title"><a href="#">Andrew Maria</a></h3>
                         <div class="th-social">
                             <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
                             <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
@@ -243,7 +243,7 @@ Team Area
                 <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
                     <div class="team-card style2">
                         <p class="team-desig">3D Autocad Designer</p>
-                        <h3 class="h5 team-title"><a href="team-details.html">Joseph Carter</a></h3>
+                        <h3 class="h5 team-title"><a href="#">Joseph Carter</a></h3>
                         <div class="th-social">
                             <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
                             <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
@@ -258,7 +258,7 @@ Team Area
                 <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-card style2">
                         <p class="team-desig">Interior Designer</p>
-                        <h3 class="h5 team-title"><a href="team-details.html">Andrew Adrian</a></h3>
+                        <h3 class="h5 team-title"><a href="#">Andrew Adrian</a></h3>
                         <div class="th-social">
                             <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
                             <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
@@ -385,8 +385,8 @@ Counter Area
                         <img class="svg-img" src="assets/img/icon/service_1_6.svg" alt="service image">
                     </div>
                     <p class="service-card_num">06</p>
-                    <h3 class="service-card_title">Artraz Everything</h3>
-                    <p class="service-card_text">Artraz is architecture as the composition of all elements that define a particular space and inform the character of Design.</p>
+                    <h3 class="service-card_title">Safety Guard Everything</h3>
+                    <p class="service-card_text">Safety Guard is architecture as the composition of all elements that define a particular space and inform the character of Design.</p>
                 </div>
             </div>
 

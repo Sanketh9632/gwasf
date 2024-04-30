@@ -15,7 +15,7 @@
 @section('main')
 
 <div class="container th-container2">
-    <div class="breadcumb-wrapper  " data-bg-src="/assets/img/breadcumb/breadcumb-bg.jpg">
+    <div class="breadcumb-wrapper  "data-bg-src="{{@$dynamic_content->banner_image ?  @$dynamic_content->banner_image : '/assets/img/breadcumb/breadcumb-bg.jpg'}}">
         <h1 class="breadcumb-title">{{@$dynamic_content->title}}</h1>
         <ul class="breadcumb-menu">
             <li><a href="{{route('home')}}">Home</a></li>
@@ -79,12 +79,12 @@
                         </div>
                     </div> -->
                     <div class="blog-navigation">
-                        <a href="blog-details.html" class="nav-btn prev">
+                        <a href="#" class="nav-btn prev">
                             <img src="/assets/img/blog/blog-nav-1.jpg" alt="blog img" class="nav-img">
                             <span class="nav-text">Previous Post</span>
                         </a>
                         <a href="#" class="blog-btn"><i class="fa-solid fa-grid"></i></a>
-                        <a href="blog-details.html" class="nav-btn next">
+                        <a href="#" class="nav-btn next">
                             <img src="/assets/img/blog/blog-nav-2.jpg" alt="blog img" class="nav-img">
                             <span class="nav-text">Next Post</span>
                         </a>
@@ -102,7 +102,7 @@
                                         <h3 class="name">David Malan</h3>
                                         <p class="text">Collaboratively empower multifunctional e-commerce for prospective applications. Seamlessly productivate plug and play markets whereas synergistic scenarios.</p>
                                         <div class="reply_and_edit">
-                                            <a href="blog-details.html" class="reply-btn"><i class="fas fa-reply"></i>Reply</a>
+                                            <a href="#" class="reply-btn"><i class="fas fa-reply"></i>Reply</a>
                                         </div>
                                     </div>
                                 </div>
@@ -118,7 +118,7 @@
                                                 <p class="text">Competently provide access to fully researched methods of empowerment
                                                     without sticky models. Credibly morph front-end niche markets.</p>
                                                 <div class="reply_and_edit">
-                                                    <a href="blog-details.html" class="reply-btn"><i class="fas fa-reply"></i>Reply</a>
+                                                    <a href="#" class="reply-btn"><i class="fas fa-reply"></i>Reply</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -135,7 +135,7 @@
                                         <h3 class="name">Tara sing</h3>
                                         <p class="text">Collaboratively empower multifunctional e-commerce for prospective applications. Seamlessly productivate plug and play markets whereas synergistic scenarios.</p>
                                         <div class="reply_and_edit">
-                                            <a href="blog-details.html" class="reply-btn"><i class="fas fa-reply"></i>Reply</a>
+                                            <a href="#" class="reply-btn"><i class="fas fa-reply"></i>Reply</a>
                                         </div>
                                     </div>
                                 </div>
@@ -216,7 +216,7 @@
                         <div class="tagcloud">
                             <a href="#">Design</a>
                             <a href="#">Interior</a>
-                            <a href="#">Artraz</a>
+                            <a href="#">Safety Guard</a>
                             <a href="#">Agency</a>
                             <a href="#">Minimal</a>
                             <a href="#">Decor Plan</a>

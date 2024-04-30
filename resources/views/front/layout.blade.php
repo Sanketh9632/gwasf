@@ -79,7 +79,7 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="{{route('home')}}"><img src="/assets/img/logo.png" alt="Artraz"></a>
+                <a href="{{route('home')}}"><img src="/assets/img/logo.png" alt="Safety Guard"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
@@ -143,7 +143,7 @@
                         <div class="row align-items-center justify-content-between">
                             <div class="col-auto">
                                 <div class="header-logo">
-                                    <a href="{{route('home')}}"><img src="/assets/img/logo.png" alt="Artraz"></a>
+                                    <a href="{{route('home')}}"><img src="/assets/img/logo.png" alt="Safety Guard"></a>
                                 </div>
                             </div>
                             <div class="col-auto">
@@ -208,7 +208,7 @@
                     <div class="widget footer-widget">
                         <h4 class="widget_title">meet?</h4>
                         <div class="logo">
-                            <img src="/assets/img/logo2.svg" alt="Artraz">
+                            <img src="/assets/img/logo2.svg" alt="Safety Guard">
                         </div>
                     </div>
                 </div>
@@ -252,7 +252,7 @@
                     </div>
                 </div>
                 <div class="col-auto">
-                    <p class="copyright-text">Copyright By © <a href="{{route('home')}}">Artraz</a> - 2024</p>
+                    <p class="copyright-text">Copyright By © <a href="{{route('home')}}">Safety Guard</a> - 2024</p>
                 </div>
             </div>
 

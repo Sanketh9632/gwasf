@@ -27,7 +27,7 @@
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.3s">Architecture</h1>
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.5s">With Different</h1>
                             <h1 class="hero-title text-transparent" data-ani="slideinup" data-ani-delay="0.5s">Approach</h1>
-                            <a href="project.html" class="th-btn" data-ani="slideinup" data-ani-delay="0.7s"><span class="line left"></span> View Projects <span class="line"></span></a>
+                            <a href="/services" class="th-btn" data-ani="slideinup" data-ani-delay="0.7s"><span class="line left"></span> View Services <span class="line"></span></a>
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.3s">Architecture</h1>
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.5s">With Different</h1>
                             <h1 class="hero-title text-transparent" data-ani="slideinup" data-ani-delay="0.5s">Approach</h1>
-                            <a href="project.html" class="th-btn" data-ani="slideinup" data-ani-delay="0.7s"><span class="line left"></span> View Projects <span class="line"></span></a>
+                            <a href="/services" class="th-btn" data-ani="slideinup" data-ani-delay="0.7s"><span class="line left"></span> View Services <span class="line"></span></a>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.3s">Architecture</h1>
                             <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.5s">With Different</h1>
                             <h1 class="hero-title text-transparent" data-ani="slideinup" data-ani-delay="0.5s">Approach</h1>
-                            <a href="project.html" class="th-btn" data-ani="slideinup" data-ani-delay="0.7s"><span class="line left"></span> View Projects <span class="line"></span></a>
+                            <a href="/services" class="th-btn" data-ani="slideinup" data-ani-delay="0.7s"><span class="line left"></span> View Services <span class="line"></span></a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                     <p class="sub-title">Eraclis Papachristou Architectural Office</p>
-                    <h2 class="sec-title mb-40">About <span class="text-transparent">Artraz</span></h2>
+                    <h2 class="sec-title mb-40">About <span class="text-transparent">Safety Guard</span></h2>
                     <p class="mb-30">Eraclis Papachristou Architects is one of the most established architectural offices in Cyprus. This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion of various projects, especially in the last ten years.</p>
                     <p class="mb-40">Enthusiastically exploit wireless ROI before cooperative deliverables. Collaboratively administrate client-focused intellectual capital after multifunctional schemas. Competently pontificate cutting-edge e-markets without.</p>
                     <a href="about.html" class="th-btn"><span class="line left"></span> About Us <span class="line"></span></a>
@@ -283,7 +283,7 @@ Service Area
                             <p class="service-card_num text-transparent">01</p>
                             <h3 class="service-card_title">Architecture</h3>
                             <p class="service-card_text">We see architecture as the composition of all elements that define a particular space and inform the character of a building.</p>
-                            <a href="service-details.html" class="link-btn">View Details</a>
+                            <a href="#" class="link-btn">View Details</a>
                         </div>
                     </div>
                     <div>
@@ -294,7 +294,7 @@ Service Area
                             <p class="service-card_num text-transparent">02</p>
                             <h3 class="service-card_title">Interior Design</h3>
                             <p class="service-card_text">In Order architecture as the composition of all elements that define a particular space and inform the character of a interior.</p>
-                            <a href="service-details.html" class="link-btn">View Details</a>
+                            <a href="#" class="link-btn">View Details</a>
                         </div>
                     </div>
                     <div>
@@ -305,7 +305,7 @@ Service Area
                             <p class="service-card_num text-transparent">03</p>
                             <h3 class="service-card_title">Urban Interventions</h3>
                             <p class="service-card_text">The Urban architecture as the composition of all elements that define a particular space and inform the character of into.</p>
-                            <a href="service-details.html" class="link-btn">View Details</a>
+                            <a href="#" class="link-btn">View Details</a>
                         </div>
                     </div>
                     <div>
@@ -316,7 +316,7 @@ Service Area
                             <p class="service-card_num text-transparent">04</p>
                             <h3 class="service-card_title">Landscape Design</h3>
                             <p class="service-card_text">The Best architecture as composition of all elements that define a particular space and inform the character of a Landscape.</p>
-                            <a href="service-details.html" class="link-btn">View Details</a>
+                            <a href="#" class="link-btn">View Details</a>
                         </div>
                     </div>
                     <div>
@@ -327,7 +327,7 @@ Service Area
                             <p class="service-card_num text-transparent">05</p>
                             <h3 class="service-card_title">Interdisciple Entity</h3>
                             <p class="service-card_text">You see architecture as the composition of all elements that define a particular space and inform the character of a Gowring.</p>
-                            <a href="service-details.html" class="link-btn">View Details</a>
+                            <a href="#" class="link-btn">View Details</a>
                         </div>
                     </div>
 
@@ -489,7 +489,7 @@ Testimonial Area
                                 <p class="testi-grid_desig">Bank Manager</p>
                             </div>
                         </div>
-                        <p class="testi-grid_text">What impressed me most about Artraz was their ability to provide innovative solutions to architectural challenges. They approached the project with a fresh perspective, incorporating cutting-edge technologies and sustainable practices that enhanced the overall appeal of the space.</p>
+                        <p class="testi-grid_text">What impressed me most about Safety Guard was their ability to provide innovative solutions to architectural challenges. They approached the project with a fresh perspective, incorporating cutting-edge technologies and sustainable practices that enhanced the overall appeal of the space.</p>
                     </div>
                 </div>
                 <div class="">
@@ -503,7 +503,7 @@ Testimonial Area
                                 <p class="testi-grid_desig">Business Man</p>
                             </div>
                         </div>
-                        <p class="testi-grid_text">What impressed me most about Artraz was their ability to provide innovative solutions to architectural challenges. They approached the project with a fresh perspective, incorporating cutting-edge technologies and sustainable practices that enhanced the overall appeal of the space.</p>
+                        <p class="testi-grid_text">What impressed me most about Safety Guard was their ability to provide innovative solutions to architectural challenges. They approached the project with a fresh perspective, incorporating cutting-edge technologies and sustainable practices that enhanced the overall appeal of the space.</p>
                     </div>
                 </div>
                 <div class="">
@@ -517,7 +517,7 @@ Testimonial Area
                                 <p class="testi-grid_desig">Heart Doctor</p>
                             </div>
                         </div>
-                        <p class="testi-grid_text">What impressed me most about Artraz was their ability to provide innovative solutions to architectural challenges. They approached the project with a fresh perspective, incorporating cutting-edge technologies and sustainable practices that enhanced the overall appeal of the space.</p>
+                        <p class="testi-grid_text">What impressed me most about Safety Guard was their ability to provide innovative solutions to architectural challenges. They approached the project with a fresh perspective, incorporating cutting-edge technologies and sustainable practices that enhanced the overall appeal of the space.</p>
                     </div>
                 </div>
             </div>
@@ -591,7 +591,7 @@ Blog Area
             </div>
             <div class="col-auto mt-n4 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="sec-btn">
-                    <a href="blog.html" class="link-btn">View The Blogs</a>
+                    <a href="{{route('blog')}}" class="link-btn">View The Blogs</a>
                 </div>
             </div>
         </div>
@@ -600,14 +600,14 @@ Blog Area
                 <div class="blog-block">
                     <div class="blog-content">
                         <div class="blog-meta style2">
-                            <a href="blog.html">Renovations</a>
-                            <a href="blog.html">February 15, 2024</a>
+                            <a href="{{route('blog')}}">Renovations</a>
+                            <a href="{{route('blog')}}">February 15, 2024</a>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Designing Environments, Creating Experiences</a></h3>
+                        <h3 class="blog-title"><a href="#">Designing Environments, Creating Experiences</a></h3>
                         <div class="blog-text-wrap" data-bg-src="/assets/img/blog/blog_5_1.jpg">
                             <p class="blog-text">The timeline varies depending on the scope and complexity of the project. We provide detailed man timelines during the initial consultation, keeping you informed at every stage. Our approach combines innovative design solutions</p>
                         </div>
-                        <a href="blog-details.html" class="link-btn">Read More</a>
+                        <a href="#" class="link-btn">Read More</a>
                     </div>
                 </div>
             </div>
@@ -615,14 +615,14 @@ Blog Area
                 <div class="blog-block">
                     <div class="blog-content">
                         <div class="blog-meta style2">
-                            <a href="blog.html">Renovations</a>
-                            <a href="blog.html">February 16, 2024</a>
+                            <a href="{{route('blog')}}">Renovations</a>
+                            <a href="{{route('blog')}}">February 16, 2024</a>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Elegance in Every Detail, Perfection in Every Space</a></h3>
+                        <h3 class="blog-title"><a href="#">Elegance in Every Detail, Perfection in Every Space</a></h3>
                         <div class="blog-text-wrap" data-bg-src="/assets/img/blog/blog_5_2.jpg">
                             <p class="blog-text">The timeline varies depending on the scope and complexity of the project. We provide detailed man timelines during the initial consultation, keeping you informed at every stage. Our approach combines innovative design solutions</p>
                         </div>
-                        <a href="blog-details.html" class="link-btn">Read More</a>
+                        <a href="#" class="link-btn">Read More</a>
                     </div>
                 </div>
             </div>
@@ -630,14 +630,14 @@ Blog Area
                 <div class="blog-block">
                     <div class="blog-content">
                         <div class="blog-meta style2">
-                            <a href="blog.html">Renovations</a>
-                            <a href="blog.html">February 17, 2024</a>
+                            <a href="{{route('blog')}}">Renovations</a>
+                            <a href="{{route('blog')}}">February 17, 2024</a>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Architects and interior designers bring expertise in spatial</a></h3>
+                        <h3 class="blog-title"><a href="#">Architects and interior designers bring expertise in spatial</a></h3>
                         <div class="blog-text-wrap" data-bg-src="/assets/img/blog/blog_5_3.jpg">
                             <p class="blog-text">The timeline varies depending on the scope and complexity of the project. We provide detailed man timelines during the initial consultation, keeping you informed at every stage. Our approach combines innovative design solutions</p>
                         </div>
-                        <a href="blog-details.html" class="link-btn">Read More</a>
+                        <a href="#" class="link-btn">Read More</a>
                     </div>
                 </div>
             </div>
@@ -645,14 +645,14 @@ Blog Area
                 <div class="blog-block">
                     <div class="blog-content">
                         <div class="blog-meta style2">
-                            <a href="blog.html">Renovations</a>
-                            <a href="blog.html">February 18, 2024</a>
+                            <a href="{{route('blog')}}">Renovations</a>
+                            <a href="{{route('blog')}}">February 18, 2024</a>
                         </div>
-                        <h3 class="blog-title"><a href="blog-details.html">Design indoor With Every Detail, Perfection Interior</a></h3>
+                        <h3 class="blog-title"><a href="#">Design indoor With Every Detail, Perfection Interior</a></h3>
                         <div class="blog-text-wrap" data-bg-src="/assets/img/blog/blog_5_4.jpg">
                             <p class="blog-text">The timeline varies depending on the scope and complexity of the project. We provide detailed man timelines during the initial consultation, keeping you informed at every stage. Our approach combines innovative design solutions</p>
                         </div>
-                        <a href="blog-details.html" class="link-btn">Read More</a>
+                        <a href="#" class="link-btn">Read More</a>
                     </div>
                 </div>
             </div>

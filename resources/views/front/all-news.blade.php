@@ -36,9 +36,9 @@
                     </div>
                     <div class="blog-content">
                         <div class="blog-meta">
-                            <!-- <a href="blog.html"><i class="fas fa-user-circle"></i>by Admin</a> -->
-                            <a href="blog.html"><i class="fas fa-calendar-alt"></i>{{@$news->event_date->format('M d, Y')}}</a>
-                            <a href="blog.html"><i class="fas fa-tags"></i>{{@$news->category->title}}</a>
+                            <!-- <a href="{{route('blog')}}"><i class="fas fa-user-circle"></i>by Admin</a> -->
+                            <a href="{{route('blog')}}"><i class="fas fa-calendar-alt"></i>{{@$news->event_date->format('M d, Y')}}</a>
+                            <a href="{{route('blog')}}"><i class="fas fa-tags"></i>{{@$news->category->title}}</a>
                         </div>
                         <h2 class="blog-title"><a href="{{route('blog-detail', [$news->slug])}}">{{@$news->title}}</a></h2>
                         <p>{{@$news->excerpt}}</p>
@@ -51,64 +51,64 @@
 
                     <div class="th-blog blog-single has-post-thumbnail">
                         <div class="blog-img">
-                            <a href="blog-details.html"><img src="/assets/img/blog/blog-s-1-1.jpg" alt="Blog Image"></a>
+                            <a href="#"><img src="/assets/img/blog/blog-s-1-1.jpg" alt="Blog Image"></a>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html"><i class="fas fa-user-circle"></i>by David Smith</a>
-                                <a href="blog.html"><i class="fas fa-calendar-alt"></i>March 15, 2024</a>
-                                <a href="blog.html"><i class="fas fa-tags"></i>Architecture</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-user-circle"></i>by David Smith</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-calendar-alt"></i>March 15, 2024</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-tags"></i>Architecture</a>
                             </div>
-                            <h2 class="blog-title"><a href="blog-details.html">Brief History on the Beginnings of Modern Architecture</a></h2>
+                            <h2 class="blog-title"><a href="#">Brief History on the Beginnings of Modern Architecture</a></h2>
                             <p>Collaboratively pontificate bleeding edge is resources with inexpensive methodologies. Globally initiate multidisciplinary compatible architectures. Rapidiously repurpose leading edge growth strategies with just in time web readiness communicate Rapidiously repurpose leading edge.</p>
-                            <a href="blog-details.html" class="th-btn">Read Details</a>
+                            <a href="#" class="th-btn">Read Details</a>
                         </div>
                     </div>
 
                     <div class="th-blog blog-single has-post-thumbnail">
                         <div class="blog-img th-carousel" data-arrows="true" data-slide-show="1" data-fade="true">
-                            <a href="blog-details.html"><img src="/assets/img/blog/blog-s-1-2.jpg" alt="Blog Image"></a>
-                            <a href="blog-details.html"><img src="/assets/img/blog/blog-s-1-3.jpg" alt="Blog Image"></a>
+                            <a href="#"><img src="/assets/img/blog/blog-s-1-2.jpg" alt="Blog Image"></a>
+                            <a href="#"><img src="/assets/img/blog/blog-s-1-3.jpg" alt="Blog Image"></a>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html"><i class="fas fa-user-circle"></i>by David Smith</a>
-                                <a href="blog.html"><i class="fas fa-calendar-alt"></i>March 16, 2024</a>
-                                <a href="blog.html"><i class="fas fa-tags"></i>Architecture</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-user-circle"></i>by David Smith</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-calendar-alt"></i>March 16, 2024</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-tags"></i>Architecture</a>
                             </div>
-                            <h2 class="blog-title"><a href="blog-details.html">Drists History on the Beginnings of Modern Interior</a></h2>
+                            <h2 class="blog-title"><a href="#">Drists History on the Beginnings of Modern Interior</a></h2>
                             <p>Collaboratively pontificate bleeding edge is resources with inexpensive methodologies. Globally initiate multidisciplinary compatible architectures. Rapidiously repurpose leading edge growth strategies with just in time web readiness communicate Rapidiously repurpose leading edge.</p>
-                            <a href="blog-details.html" class="th-btn">Read Details</a>
+                            <a href="#" class="th-btn">Read Details</a>
                         </div>
                     </div>
 
                     <div class="th-blog blog-single">
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html"><i class="fas fa-user-circle"></i>by David Smith</a>
-                                <a href="blog.html"><i class="fas fa-calendar-alt"></i>March 17, 2024</a>
-                                <a href="blog.html"><i class="fas fa-tags"></i>Architecture</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-user-circle"></i>by David Smith</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-calendar-alt"></i>March 17, 2024</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-tags"></i>Architecture</a>
                             </div>
-                            <h2 class="blog-title"><a href="blog-details.html">History on the Beginnings of Modern Architecture</a></h2>
+                            <h2 class="blog-title"><a href="#">History on the Beginnings of Modern Architecture</a></h2>
                             <p>Collaboratively pontificate bleeding edge is resources with inexpensive methodologies. Globally initiate multidisciplinary compatible architectures. Rapidiously repurpose leading edge growth strategies</p>
-                            <a href="blog-details.html" class="th-btn">Read Details</a>
+                            <a href="#" class="th-btn">Read Details</a>
                         </div>
                     </div>
 
                     <div class="th-blog blog-single has-post-thumbnail">
                         <div class="blog-img">
-                            <a href="blog-details.html"><img src="/assets/img/blog/blog-s-1-4.jpg" alt="Blog Image"></a>
+                            <a href="#"><img src="/assets/img/blog/blog-s-1-4.jpg" alt="Blog Image"></a>
                             <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn popup-video"><i class="fas fa-play"></i></a>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html"><i class="fas fa-user-circle"></i>by David Smith</a>
-                                <a href="blog.html"><i class="fas fa-calendar-alt"></i>March 17, 2024</a>
-                                <a href="blog.html"><i class="fas fa-tags"></i>Architecture</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-user-circle"></i>by David Smith</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-calendar-alt"></i>March 17, 2024</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-tags"></i>Architecture</a>
                             </div>
-                            <h2 class="blog-title"><a href="blog-details.html">Origin of Art on the Beginnings of Modern Architecture</a></h2>
+                            <h2 class="blog-title"><a href="#">Origin of Art on the Beginnings of Modern Architecture</a></h2>
                             <p>Collaboratively pontificate bleeding edge is resources with inexpensive methodologies. Globally initiate multidisciplinary compatible architectures. Rapidiously repurpose leading edge growth strategies with just in time web readiness communicate Rapidiously repurpose leading edge..</p>
-                            <a href="blog-details.html" class="th-btn">Read Details</a>
+                            <a href="#" class="th-btn">Read Details</a>
                         </div>
                     </div>
 
@@ -118,13 +118,13 @@
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html"><i class="fas fa-user-circle"></i>by David Smith</a>
-                                <a href="blog.html"><i class="fas fa-calendar-alt"></i>March 19, 2024</a>
-                                <a href="blog.html"><i class="fas fa-tags"></i>Architecture</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-user-circle"></i>by David Smith</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-calendar-alt"></i>March 19, 2024</a>
+                                <a href="{{route('blog')}}"><i class="fas fa-tags"></i>Architecture</a>
                             </div>
-                            <h2 class="blog-title"><a href="blog-details.html">Brief History on the Beginnings of Modern Architecture</a></h2>
+                            <h2 class="blog-title"><a href="#">Brief History on the Beginnings of Modern Architecture</a></h2>
                             <p>Collaboratively pontificate bleeding edge is resources with inexpensive methodologies. Globally initiate multidisciplinary compatible architectures. Rapidiously repurpose leading edge growth strategies with just in time web readiness communicate Rapidiously repurpose leading edge.</p>
-                            <a href="blog-details.html" class="th-btn">Read Details</a>
+                            <a href="#" class="th-btn">Read Details</a>
                         </div>
                     </div>
 
@@ -133,10 +133,10 @@
                         {{-- {{ @$recent_news->links() }}  --}}
                             
                         <ul>
-                            <li><a href="blog.html">1</a></li>
-                            <li><a href="blog.html">2</a></li>
-                            <li><a href="blog.html">3</a></li>
-                            <li><a href="blog.html"><i class="far fa-arrow-right"></i></a></li>
+                            <li><a href="{{route('blog')}}">1</a></li>
+                            <li><a href="{{route('blog')}}">2</a></li>
+                            <li><a href="{{route('blog')}}">3</a></li>
+                            <li><a href="{{route('blog')}}"><i class="far fa-arrow-right"></i></a></li>
                         </ul>
                         
                     </div>
@@ -160,19 +160,19 @@
                                 @endforeach
                                 
                                 <li>
-                                    <a href="blog.html">Architecture</a>
+                                    <a href="{{route('blog')}}">Architecture</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Landscape</a>
+                                    <a href="{{route('blog')}}">Landscape</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Urban Interventions</a>
+                                    <a href="{{route('blog')}}">Urban Interventions</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Interdisciplinary entities</a>
+                                    <a href="{{route('blog')}}">Interdisciplinary entities</a>
                                 </li>
                                 <li>
-                                    <a href="blog.html">Artraz Everything</a>
+                                    <a href="{{route('blog')}}">Safety Guard Everything</a>
                                 </li>
                             </ul>
                         </div>
@@ -196,24 +196,24 @@
 
                                 <div class="recent-post">
                                     <div class="media-img">
-                                        <a href="blog-details.html"><img src="/assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
+                                        <a href="#"><img src="/assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
                                     </div>
                                     <div class="media-body">
                                         <div class="recent-post-meta">
-                                            <a href="blog.html"><i class="fal fa-user-circle"></i>by Vivi Marian</a>
+                                            <a href="{{route('blog')}}"><i class="fal fa-user-circle"></i>by Vivi Marian</a>
                                         </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Drists History on the Beginnings of Modern Interior</a></h4>
+                                        <h4 class="post-title"><a class="text-inherit" href="#">Drists History on the Beginnings of Modern Interior</a></h4>
                                     </div>
                                 </div>
                                 <div class="recent-post">
                                     <div class="media-img">
-                                        <a href="blog-details.html"><img src="/assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
+                                        <a href="#"><img src="/assets/img/blog/recent-post-1-3.jpg" alt="Blog Image"></a>
                                     </div>
                                     <div class="media-body">
                                         <div class="recent-post-meta">
-                                            <a href="blog.html"><i class="fal fa-user-circle"></i>by John Deo</a>
+                                            <a href="{{route('blog')}}"><i class="fal fa-user-circle"></i>by John Deo</a>
                                         </div>
-                                        <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Origin of Art on the Beginnings of Modern Architecture</a></h4>
+                                        <h4 class="post-title"><a class="text-inherit" href="#">Origin of Art on the Beginnings of Modern Architecture</a></h4>
                                     </div>
                                 </div>
 
@@ -246,13 +246,13 @@
                         <!-- <div class="widget widget_tag_cloud   ">
                             <h3 class="widget_title">Popular Tags</h3>
                             <div class="tagcloud">
-                                <a href="blog.html">Design</a>
-                                <a href="blog.html">Interior</a>
-                                <a href="blog.html">Artraz</a>
-                                <a href="blog.html">Agency</a>
-                                <a href="blog.html">Minimal</a>
-                                <a href="blog.html">Decor Plan</a>
-                                <a href="blog.html">Urban</a>
+                                <a href="{{route('blog')}}">Design</a>
+                                <a href="{{route('blog')}}">Interior</a>
+                                <a href="{{route('blog')}}">Safety Guard</a>
+                                <a href="{{route('blog')}}">Agency</a>
+                                <a href="{{route('blog')}}">Minimal</a>
+                                <a href="{{route('blog')}}">Decor Plan</a>
+                                <a href="{{route('blog')}}">Urban</a>
                             </div>
                         </div> -->
                     </aside>

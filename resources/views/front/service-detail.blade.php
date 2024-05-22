@@ -16,11 +16,11 @@
 
 <!-- Breadcrumbs Start -->
 <div class="container th-container2">
-    <div class="breadcumb-wrapper  " data-bg-src="/assets/img/breadcumb/breadcumb-bg-2.jpg">
+    <div class="breadcumb-wrapper  " data-bg-src="{{@$dynamic_content->banner_image}}">
         <h1 class="breadcumb-title">{{@$dynamic_content->title}}</h1>
         <ul class="breadcumb-menu">
             <li><a href="{{route('home')}}">Home</a></li>
-            <li>{{@$dynamic_content->title}}</li>
+            <li>{{@$sub_menu_id->name}}</li>
         </ul>
     </div>
 </div>
@@ -35,26 +35,33 @@
                     <div class="page-img">
                         <img class="w-100" src="{{@$dynamic_content->image}}" alt="Service Image">
                     </div>
-                    <h3 class="single-title">{{@$dynamic_content->title}}</h3>
+                    <h3 class="single-title">{{@$dynamic_content->excerpt}}</h3>
                     <div class="service-content">
 
                         {!! removeExtraChar(@$dynamic_content->body) !!}
 
                         <div class="row gy-30 mb-40">
-                            <div class="col-md-6">
-                                <img class="w-100" src="/assets/img/service/service_inner_1.png" alt="image">
+			@if(@$post_tabs)
+			@foreach($post_tabs as $tab)
+			@if($tab->tab_image)
+                            <div class="col-md-12">
+                                <img class="w-100" src="{{@$tab->tab_image}}" alt="image">
                             </div>
-                            <div class="col-md-6">
-                                <h4 class="mb-20">Planning the environment</h4>
-                                <h5>Design Approach</h5>
-                                <p>Enthusiastically promote one-to-one synergy and resource maximizing products.</p>
-                                <h5>Innovative Solutions</h5>
-                                <p>Enthusiastically promote one-to-one synergy and resource maximizing products.</p>
-                                <h5>Project Management</h5>
-                                <p>Enthusiastically promote one-to-one synergy and resource maximizing products.</p>
+                            <div class="col-md-12">
+				<h4 class="text-uppercase mb-20">{{@$tab->tab_title}}</h4>
+                                 {!! removeExtraChar(@$tab->tab_body) !!}
                             </div>
+			@else
+			<div class="col-md-12">
+			<h4 class="text-uppercase mb-20">{{@$tab->tab_title}}</h4>
+				 {!! removeExtraChar(@$tab->tab_body) !!}
+			</div>
+			@endif
+			@endforeach
+			@endif
                         </div>
-                        <h4 class="text-uppercase mb-20">3 Simple Steps to Process</h4>
+
+                        {{-- <h4 class="text-uppercase mb-20">3 Simple Steps to Process</h4>
                         <p class="mb-30">Assertively e-enable catalysts for change before fully tested markets. Phosfluorescently maintain wireless scenarios after intermandated applications. Conveniently predominate revolutionary quality vectors through future-proof manufactured products. Enthusiastically transform distinctive collaboration.</p>
                         <p class="mb-30">Phosfluorescently maintain wireless scenarios after intermandated applications. Conveniently predominate revolutionary quality vectors through future-proof manufactured products.</p>
                         <div class="row gy-30">
@@ -65,7 +72,7 @@
                                 <img class="w-100" src="/assets/img/service/service_inner_3.jpg" alt="image">
                             </div>
                         </div>
-                        <p class="mt-30 mb-n2">Conveniently predominate revolutionary quality vectors through future-proof manufactured products. Objectively envisioneer high in convergence through collaborative networks. Interactively generate B2C tailers for business data restore fully researched relationships through.</p>
+                        <p class="mt-30 mb-n2">Conveniently predominate revolutionary quality vectors through future-proof manufactured products. Objectively envisioneer high in convergence through collaborative networks. Interactively generate B2C tailers for business data restore fully researched relationships through.</p> --}}
                     </div>
                 </div>
             </div>

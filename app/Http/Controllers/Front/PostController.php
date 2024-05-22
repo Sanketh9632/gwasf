@@ -464,12 +464,13 @@ class PostController extends Controller
   public function getServiceDetail($slug = null)
   {
     $parent_menu_id = ParentMenu::select('slug', 'id', 'name')->where('slug', 'services')->first();
-    
+    $sub_menu_id = SubMenu::select('slug', 'id', 'name')->where('slug', $slug)->first();
+
     $services = Post::join('sub_menus', function ($sub_menus) {
       $sub_menus->on('sub_menus.id', 'posts.child_menu_id');
     })->select('posts.*')->where('posts.parent_menu_id', @$parent_menu_id->id)->orderBy('sub_menus.hierarchy')->whereNull('posts.deleted_at')->get();
 
-    $dynamic_content = Post::where('slug', $slug)->first();
+    $dynamic_content = Post::where('sub_menu_id', $sub_menu_id->id)->first();
 
     if (@$dynamic_content->tab_section == 'Y') {
       $post_tabs = PostTab::where('post_id', '=', @$dynamic_content->id)->get();
@@ -481,7 +482,7 @@ class PostController extends Controller
 
     $prospect = DownloadProspect::where('post_id', @$dynamic_content->id)->first();
 
-    return view('front.service-detail', compact('parent_menu_id', 'services', 'dynamic_content'));
+    return view('front.service-detail', compact('parent_menu_id', 'sub_menu_id', 'services', 'dynamic_content', 'post_tabs'));
   }
 
   // Faculty Details

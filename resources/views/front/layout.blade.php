@@ -50,7 +50,7 @@
     <link rel="stylesheet" href="/assets/css/slick.min.css">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="/assets/css/style.css">
-
+@yield('css')
 </head>
 
 <body class="">
@@ -86,7 +86,7 @@
                 @foreach($parent_menu->where('display_menu','Y')->where('status', 'Active') as $main_menu)
                 @if($main_menu->sub_menu == 'Y' && $main_menu->submenus->count() !== 0)
 
-                    <li class="menu-item-has-children"><a href="#">{{ $main_menu->name }} </a>
+                    <li class="menu-item-has-children"><a href="{{ route('dynamicpage',[$main_menu->slug]) }}">{{ $main_menu->name }} </a>
                     <ul class="sub-menu">
                     @foreach($main_menu->submenus as $main_sub_menu)
                     @if(@$main_sub_menu->link_active)
@@ -153,7 +153,7 @@
                                     @foreach($parent_menu->where('display_menu','Y')->where('status', 'Active') as $main_menu)
                                     @if($main_menu->sub_menu == 'Y' && $main_menu->submenus->count() !== 0)
 
-                                        <li class="menu-item-has-children"><a href="#">{{ $main_menu->name }} </a>
+                                        <li class="menu-item-has-children"><a href="{{ route('dynamicpage',[$main_menu->slug]) }}">{{ $main_menu->name }} </a>
                                         <ul class="sub-menu">
                                         @foreach($main_menu->submenus as $main_sub_menu)
 							            @if(@$main_sub_menu->link_active)
@@ -208,7 +208,7 @@
                     <div class="widget footer-widget">
                         <h4 class="widget_title">meet?</h4>
                         <div class="logo">
-                            <img src="/assets/img/logo2.svg" alt="Safety Guard">
+                            <img src="/assets/img/logo.png" alt="Safety Guard">
                         </div>
                     </div>
                 </div>
@@ -216,8 +216,8 @@
                     <div class="widget footer-widget">
                         <h4 class="widget_title">call</h4>
                         <h6 class="footer-info">
-                            <a class="link" href="tel:+134711223344">+1 347 11 22 33 44 (USA)</a>
-                            <a class="link" href="tel:+38012456789000">+380 1245 6789 000</a>
+                            <a class="link" href="tel:{{@$address->phone}}">{{@$address->phone}}</a>
+                            {{-- <a class="link" href="tel:+38012456789000">+380 1245 6789 000</a> --}}
                         </h6>
                     </div>
                 </div>
@@ -225,8 +225,8 @@
                     <div class="widget footer-widget">
                         <h4 class="widget_title">Email</h4>
                         <h6 class="footer-info">
-                            <a class="link" href="mailto:info-artraz@artrazmail.com">info.artraz@artrazmail.com</a>
-                            <a class="link" href="mailto:artraz@artrazmail.com">artraz@artrazmail.com</a>
+                            <a class="link" href="mailto:{{@$address->email}}">{{@$address->email}}</a>
+                            {{--<a class="link" href="mailto:artraz@artrazmail.com">artraz@artrazmail.com</a>--}}
                         </h6>
                     </div>
                 </div>
@@ -234,7 +234,7 @@
                     <div class="widget footer-widget">
                         <h4 class="widget_title">Visit</h4>
                         <h6 class="footer-info">
-                            <a class="link" href="https://www.google.com/maps">Office #482 Henerala Street,<br> Kyiv, Ukraine, 03035</a>
+                            <a class="link" href="#">{{@$address->address}}</a>
                         </h6>
                     </div>
                 </div>

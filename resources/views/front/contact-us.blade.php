@@ -2,7 +2,7 @@
 
 @section('meta')
 
-<title>Safety Guard | Contact Us</title>
+@section('title', 'Safety Guard | Contact Us')
 <meta name="author" content="Safety Guard">
 <meta name="description" content="">
 <meta name="keywords" content="">

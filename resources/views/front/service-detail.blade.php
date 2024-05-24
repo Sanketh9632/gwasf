@@ -16,7 +16,7 @@
 
 <!-- Breadcrumbs Start -->
 <div class="container th-container2">
-    <div class="breadcumb-wrapper  " data-bg-src="{{@$dynamic_content->banner_image}}">
+    <div class="breadcumb-wrapper  " data-bg-src="/{{@$dynamic_content->banner_image}}">
         <h1 class="breadcumb-title">{{@$dynamic_content->title}}</h1>
         <ul class="breadcumb-menu">
             <li><a href="{{route('home')}}">Home</a></li>

@@ -199,9 +199,10 @@ class PostController extends Controller
           })->select('posts.*')->where('posts.parent_menu_id', '=', $parent_menu_id->id)->whereNull('child_menu_id')->orderBy('sub_menus.hierarchy')->whereNull('posts.deleted_at')->get();
 
         }
+	$dynamic_contents = Post::where('parent_menu_id', $parent_menu_id->id)->whereNull('sub_menu_id')->first();
         $content_type = "dynamic";
 
-        return view('front.dynamic-content', compact('services', 'parent_menu_id', 'sub_menu_id'));
+        return view('front.dynamic-content', compact('services', 'parent_menu_id', 'sub_menu_id', 'dynamic_contents'));
       } else {
         if ($sub_slug == null) {
 
@@ -401,9 +402,11 @@ class PostController extends Controller
 
       $clients = array_values($clients);
 
-      // dd($gallery);
+      $testimonial = Testimonial::orderBy('id', 'desc')->get();
 
-      return view('front.dynamic-content', compact('dynamic_contents', 'parent_menu_id', 'content_type', 'sub_menu_id', 'child_menu_id', 'sub_menu', 'side_bar_menu', 'team_details', 'team_tabs', 'prospects', 'post_tabs', 'counts', 'content_list', 'gallery', 'services', 'recent_news', 'clients'));
+      //dd($post_tabs);
+
+      return view('front.dynamic-content', compact('dynamic_contents', 'parent_menu_id', 'content_type', 'sub_menu_id', 'child_menu_id', 'sub_menu', 'side_bar_menu', 'team_details', 'team_tabs', 'prospects', 'post_tabs', 'counts', 'content_list', 'gallery', 'services', 'recent_news', 'clients', 'testimonial'));
     } catch (\Exception $e) {
       return redirect('/');
     }

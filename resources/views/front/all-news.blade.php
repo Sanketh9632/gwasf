@@ -15,7 +15,7 @@
 @section('main')
 
 <div class="container th-container2">
-        <div class="breadcumb-wrapper  " data-bg-src="/assets/img/breadcumb/breadcumb-bg.jpg">
+        <div class="breadcumb-wrapper  " data-bg-src="storage/files/Bread/Services.jpg">
             <h1 class="breadcumb-title">Latest Blogs</h1>
             <ul class="breadcumb-menu">
                 <li><a href="{{route('home')}}">Home</a></li>
@@ -49,7 +49,7 @@
                 @endforeach
 
 
-                    <div class="th-blog blog-single has-post-thumbnail">
+                {{--    <div class="th-blog blog-single has-post-thumbnail">
                         <div class="blog-img">
                             <a href="#"><img src="/assets/img/blog/blog-s-1-1.jpg" alt="Blog Image"></a>
                         </div>
@@ -126,18 +126,18 @@
                             <p>Collaboratively pontificate bleeding edge is resources with inexpensive methodologies. Globally initiate multidisciplinary compatible architectures. Rapidiously repurpose leading edge growth strategies with just in time web readiness communicate Rapidiously repurpose leading edge.</p>
                             <a href="#" class="th-btn">Read Details</a>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="th-pagination  ">
 
-                        {{-- {{ @$recent_news->links() }}  --}}
+                        {{-- {{ @$recent_news->links() }} --}}
                             
-                        <ul>
+                        {{-- <ul>
                             <li><a href="{{route('blog')}}">1</a></li>
                             <li><a href="{{route('blog')}}">2</a></li>
                             <li><a href="{{route('blog')}}">3</a></li>
                             <li><a href="{{route('blog')}}"><i class="far fa-arrow-right"></i></a></li>
-                        </ul>
+                        </ul> --}}
                         
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                                 <button type="submit"><i class="far fa-search"></i></button>
                             </form>
                         </div> -->
-                        <div class="widget widget_categories  ">
+                        <!-- <div class="widget widget_categories  ">
                             <h3 class="widget_title">Categories</h3>
                             <ul>
 
@@ -159,7 +159,7 @@
                                 </li>
                                 @endforeach
                                 
-                                <li>
+                                {{-- <li>
                                     <a href="{{route('blog')}}">Architecture</a>
                                 </li>
                                 <li>
@@ -173,9 +173,9 @@
                                 </li>
                                 <li>
                                     <a href="{{route('blog')}}">Safety Guard Everything</a>
-                                </li>
+                                </li> --}}
                             </ul>
-                        </div>
+                        </div> -->
                         <div class="widget  ">
                             <h3 class="widget_title">Recent Posts</h3>
                             <div class="recent-post-wrap">
@@ -194,7 +194,7 @@
                                 </div>
                                 @endforeach
 
-                                <div class="recent-post">
+                                {{-- <div class="recent-post">
                                     <div class="media-img">
                                         <a href="#"><img src="/assets/img/blog/recent-post-1-2.jpg" alt="Blog Image"></a>
                                     </div>
@@ -215,7 +215,7 @@
                                         </div>
                                         <h4 class="post-title"><a class="text-inherit" href="#">Origin of Art on the Beginnings of Modern Architecture</a></h4>
                                     </div>
-                                </div>
+                                </div> --}}
 
 
                             </div>

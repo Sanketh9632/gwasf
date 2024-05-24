@@ -18,7 +18,7 @@
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <div class="container th-container2">
-    <div class="breadcumb-wrapper  " data-bg-src="assets/img/breadcumb/breadcumb-bg.jpg">
+    <div class="breadcumb-wrapper  " data-bg-src="storage/files/Bread/Services.jpg">
         <h1 class="breadcumb-title">Contact Us</h1>
         <ul class="breadcumb-menu">
             <li><a href="{{route('home')}}">Home</a></li>
@@ -37,41 +37,48 @@
       </div>
       @endif
 
+<section class="spaces">
+            <div class="container">
+                 <div class="space-bottoms">
+                     <div class="widget-area">
 
-      <section class="space">
-        <div class="container">
-            <div class="space-bottom">
-                <div class="footer-info-box wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="row gx-0 justify-content-between">
-                        <div class="col-lg-4 col-sm-auto">
-                            <div class="footer-box">
-                                <h6 class="footer-info has-icon">
-                                    <i class="far fa-envelope"></i>
-                                    <a class="link" href="mailto:{{@$address->email}}">{{@$address->email}}</a>
-                                    <!-- <a class="link" href="mailto:artraz@artrazmail.com">artraz@artrazmail.com</a> -->
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md order-3 order-md-0">
-                            <div class="footer-box">
-                                <h6 class="footer-info has-icon">
-                                    <i class="far fa-phone"></i>
-                                    <a class="link" href="tel:{{@$address->phone}}">{{@$address->phone}}</a>
-                                    <!-- <a class="link" href="tel:+12345678922">(+123) 456789 22</a> -->
-                                </h6>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-auto">
-                            <div class="footer-box">
-                                <h6 class="footer-info has-icon">
-                                    <i class="far fa-location-dot"></i>
-                                    <a class="link" href="#">{!!@$address->address!!}</a>
-                                </h6>
-                            </div>
-                        </div>
-                    </div>
+        <div class="row justify-content-between">
+            <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.2s">
+                <div class="widget footer-widget rests ">
+                    <h4 class="widget_title">call</h4>
+                    <h6 class="footer-info">
+                        <a class="link" href="tel:{{@$address->phone}}">{{@$address->phone}}</a>
+                        {{-- <a class="link" href="tel:+38012456789000">+380 1245 6789 000</a> --}}
+                    </h6>
                 </div>
             </div>
+            <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.3s">
+                <div class="widget footer-widget rests">
+                    <h4 class="widget_title">Email</h4>
+                    <h6 class="footer-info">
+                        <a class="link" href="mailto:{{@$address->email}}">{{@$address->email}}</a>
+                        {{--<a class="link" href="mailto:artraz@artrazmail.com">artraz@artrazmail.com</a>--}}
+                    </h6>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.4s">
+                <div class="widget footer-widget rests">
+                    <h4 class="widget_title">Visit</h4>
+                    <h6 class="footer-info">
+                        <a class="link" href="#">{{@$address->address}}</a>
+                    </h6>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</section>
+      
+    
+		<section class="space">
+        <div class="container">
+             <div class="space-bottom">
             <div class="row justify-content-between">
                 <div class="col-xl-6 mb-5 mb-xl-0 wow fadeInLeft" data-wow-delay="0.2s">
                     <span class="h6 mt-n2 mb-3 text-theme">Contact Us</span>

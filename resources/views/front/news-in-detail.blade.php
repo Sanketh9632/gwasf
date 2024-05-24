@@ -78,7 +78,7 @@
                             </ul>
                         </div>
                     </div> -->
-                    <div class="blog-navigation">
+                    <!-- <div class="blog-navigation">
                         <a href="#" class="nav-btn prev">
                             <img src="/assets/img/blog/blog-nav-1.jpg" alt="blog img" class="nav-img">
                             <span class="nav-text">Previous Post</span>
@@ -88,7 +88,7 @@
                             <img src="/assets/img/blog/blog-nav-2.jpg" alt="blog img" class="nav-img">
                             <span class="nav-text">Next Post</span>
                         </a>
-                    </div>
+                    </div> -->
                     <!-- <div class="th-comments-wrap  ">
                         <h2 class="blog-inner-title h3">Comments (03)</h2>
                         <ul class="comment-list">
@@ -174,13 +174,13 @@
             </div>
             <div class="col-lg-4 ps-lg-2">
                 <aside class="sidebar-area">
-                    <div class="widget widget_search   ">
+                    {{-- <div class="widget widget_search   ">
                         <form class="search-form">
                             <input type="text" placeholder="Search...">
                             <button type="submit"><i class="far fa-search"></i></button>
                         </form>
-                    </div>
-                    <div class="widget widget_categories  ">
+                    </div> --}}
+                    {{-- <div class="widget widget_categories  ">
                         <h3 class="widget_title">Categories</h3>
                         <ul>
                             @foreach(@$categories as $category)
@@ -190,7 +190,7 @@
                             @endforeach
                             
                         </ul>
-                    </div>
+                    </div> --}}
                     <div class="widget  ">
                         <h3 class="widget_title">Recent Posts</h3>
                         <div class="recent-post-wrap">

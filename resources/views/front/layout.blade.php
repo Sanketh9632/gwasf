@@ -42,6 +42,7 @@
 	============================== -->
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Fontawesome Icon -->
     <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
     <!-- Magnific Popup -->
@@ -66,8 +67,8 @@
     <!--==============================
      Preloader
   ==============================-->
-    <div class="preloader  ">
-        <button class="th-btn style3 preloaderCls">Cancel Preloader </button>
+    <div class="preloader">
+        <button class="th-btn style3 preloaderCls">Safety Gard</button>
         <div class="preloader-inner">
             <span class="loader"></span>
         </div>
@@ -125,16 +126,11 @@
 ==============================-->
     <header class="th-header header-layout4">
         <div class="header-top">
-            <div class="th-container container">
-                <div class="social-box">
-                    <div class="th-social">
-                        <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                        <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="th-social">
+                <a target="_blank" href="tel:+971526523388">+971526523388</a>
+                 <a target="_blank" href="mailto:safetygard520@gmail.com">safetygard520@gmail.com</a>
+    </div>
+</div>
         <div class="sticky-wrapper">
             <div class="sticky-active">
                 <!-- Main Menu Area -->
@@ -206,14 +202,17 @@
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.1s">
                     <div class="widget footer-widget">
-                        <h4 class="widget_title">meet?</h4>
-                        <div class="logo">
+                        <div class="logo flogo">
                             <img src="/assets/img/logo.png" alt="Safety Guard">
+			<p>Your trusted source for superior window <br>
+			 tinting solutions for homes and businesses in Dubai.<br> 
+			 We elevate your space with style, comfort, and protection.</p>
                         </div>
                     </div>
                 </div>
+			
                 <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="widget footer-widget">
+                    <div class="widget footer-widget rest ">
                         <h4 class="widget_title">call</h4>
                         <h6 class="footer-info">
                             <a class="link" href="tel:{{@$address->phone}}">{{@$address->phone}}</a>
@@ -222,7 +221,7 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="widget footer-widget">
+                    <div class="widget footer-widget rest">
                         <h4 class="widget_title">Email</h4>
                         <h6 class="footer-info">
                             <a class="link" href="mailto:{{@$address->email}}">{{@$address->email}}</a>
@@ -231,13 +230,14 @@
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="widget footer-widget">
+                    <div class="widget footer-widget rest">
                         <h4 class="widget_title">Visit</h4>
                         <h6 class="footer-info">
                             <a class="link" href="#">{{@$address->address}}</a>
                         </h6>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -252,7 +252,7 @@
                     </div>
                 </div>
                 <div class="col-auto">
-                    <p class="copyright-text">Copyright By © <a href="{{route('home')}}">Safety Guard</a> - 2024</p>
+                    <p class="copyright-text">Copyright By © <a href="{{route('home')}}">Safety Gard</a> - 2024</p>
                 </div>
             </div>
 

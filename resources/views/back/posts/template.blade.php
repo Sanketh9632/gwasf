@@ -395,7 +395,7 @@ SEO
 
 <div class="news">
     
-    @component('back.components.box')
+    {{-- @component('back.components.box')
     @slot('type')
     primary
     @endslot
@@ -415,7 +415,7 @@ SEO
         {!! $errors->first('home_image', '<span class="help-block">:message</span>') !!}
     </div>
     @endslot
-    @endcomponent
+    @endcomponent --}}
 
     @component('back.components.box')
     @slot('type')
@@ -438,6 +438,18 @@ SEO
     @endcomponent
 </div>
 
+
+@component('back.components.box')
+@slot('type')
+primary
+@endslot
+@slot('boxTitle')
+@lang('Constant')
+@endslot
+
+    <input class="form-control" type="text" id="constant" name="constant" value="{{ old('constant', isset($post) ?$post->constant : '') }}"/>
+    
+@endcomponent
 
 {{--  @include('back.partials.boxinput', [
 'box' => [

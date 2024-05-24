@@ -18,21 +18,25 @@
 
 <div class="th-hero-wrapper hero-4">
         <div class="hero-slider-4 th-carousel" id="heroSlide4" data-fade="false" data-slide-show="1">
+
+	@foreach(@$sliders as $slide)
             <div>
                 <div class="th-hero-slide">
-                    <div class="th-hero-bg" data-bg-src="/assets/img/bg/hero_bg_4_1.jpg" data-overlay="black" data-opacity="6"></div>
+                    <div class="th-hero-bg" data-bg-src="{{@$slide->image}}" data-overlay="black" data-opacity="6"></div>
                     <div class="container">
                         <div class="hero-style4">
-                            <span class="h4 hero-subtitle" data-ani="slideinup" data-ani-delay="0.1s">DESIGN IS MAKING SENSE OF THINGS.</span>
-                            <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.3s">Architecture</h1>
-                            <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.5s">With Different</h1>
-                            <h1 class="hero-title text-transparent" data-ani="slideinup" data-ani-delay="0.5s">Approach</h1>
+                            <span class="h4 hero-subtitle" data-ani="slideinup" data-ani-delay="0.1s">{{@$slide->title}}</span>
+                            <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.3s">{!! @$slide->excerpt  !!}</h1>
+                            {{-- <h1 class="hero-title" data-ani="slideinup" data-ani-delay="0.5s">With Different</h1>
+                            <h1 class="hero-title text-transparent" data-ani="slideinup" data-ani-delay="0.5s">Approach</h1> --}}
                             <a href="/services" class="th-btn" data-ani="slideinup" data-ani-delay="0.7s"><span class="line left"></span> View Services <span class="line"></span></a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div>
+	@endforeach
+
+            {{-- <div>
                 <div class="th-hero-slide">
                     <div class="th-hero-bg" data-bg-src="/assets/img/bg/hero_bg_4_2.jpg" data-overlay="black" data-opacity="6"></div>
                     <div class="container">
@@ -59,7 +63,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
+
         </div>
         <div class="icon-box">
             <button data-slick-prev="#heroSlide4" class="slick-arrow default cursor-btn"><i class="fal fa-long-arrow-left"></i></button>
@@ -100,14 +105,14 @@ Mockup Area
             <div class="col-xl-4 col-lg-4 mb-5 mb-xl-0 wow fadeInRight" data-wow-delay="0.2s">
                 <div class="img-box2">
                     <div class="img1">
-                        <img src="/assets/img/shape/shape_light.png" alt="shape">
+                        <img src="https://safetygarddubai.falconkonnect.com/storage/files/Home_page/Home_about.jpg?_t=1716371864" alt="shape">
                     </div>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-8 mt-lg-5 wow fadeInUp" data-wow-delay="0.2s">
-                <span class="h5 text-theme mb-25">Hospitality & Leisure</span>
-                <h2 class="sec-titile lt-2 mb-35">WHERE FLUID FORM <br> DESCRIBES <span class="text-transparent">FUNCTION</span></h2>
-                <p class="mb-30">Progressively predominate 24/365 services with cutting-edge services. Intrinsicly visualize clicks-and-mortar "outside the box" thinking for long-term high-impact information. Continually build team driven growth strategies vis-a-vis front-end innovation. Proactively incentivize ubiquitous portals.</p>
+                <span class="h5 text-theme mb-25">Safety Gard Dubai</span>
+                <h2 class="sec-titile lt-2 mb-35">Transform Your Windows,<span class="text-transparent">Enhance Your Space</span></h2>
+                <p class="mb-30">Safety Gard Dubai is your one-stop shop for superior window tinting solutions in the city. We cater to both residential and commercial properties, offering a wide range of films to meet your unique needs for privacy, comfort, and style.</p>
             </div>
         </div>
          </div>
@@ -124,7 +129,7 @@ Feature Area
             <div class="row align-items-center">
                 <div class="col-lg-auto">
                     <div class="title-circle wow fadeInUp" data-wow-delay="0.2s">
-                        <span class="big-title mb-50">C.</span>
+                        <span class="big-title mb-50">A.</span>
                         <h2 class="sec-title">Why <span class="text-theme">choose us </span></h2>
                     </div>
                 </div>
@@ -137,8 +142,8 @@ Feature Area
                                     <img src="/assets/img/icon/choose_feature_1.svg" alt="icon">
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="box-title">Smart Home Integration</h3>
-                                    <p class="box-text">The interior of the house underwent the most mang remarkable transfor</p>
+                                    <h3 class="box-title">Cool It Down</h3>
+                                    <p class="box-text">Beat Dubai's heat with our tinting, reducing energy bills and creating a cooler space.</p>
                                 </div>
                             </div>
                         </div>
@@ -149,8 +154,8 @@ Feature Area
                                     <img src="/assets/img/icon/choose_feature_2.svg" alt="icon">
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="box-title">Space Crafting Solutions</h3>
-                                    <p class="box-text">We offer eco-friendly design options and can incorporate sustainable practices</p>
+                                    <h3 class="box-title">Privacy First</h3>
+                                    <p class="box-text">Enjoy peace of mind with films that block unwanted eyes while still letting in light.</p>
                                 </div>
                             </div>
                         </div>
@@ -161,8 +166,8 @@ Feature Area
                                     <img src="/assets/img/icon/choose_feature_3.svg" alt="icon">
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="box-title">Aesthetic Axis Services</h3>
-                                    <p class="box-text">The duration varies based on the project's complexity, but we work efficiently</p>
+                                    <h3 class="box-title">Sun Protection</h3>
+                                    <p class="box-text">Shield your furniture and valuables from harmful UV rays with our UV-blocking films.</p>
                                 </div>
                             </div>
                         </div>
@@ -173,8 +178,8 @@ Feature Area
                                     <img src="/assets/img/icon/choose_feature_4.svg" alt="icon">
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="box-title">Smart Home Interior</h3>
-                                    <p class="box-text">Begin by scheduling a consultation with our architects to discuss</p>
+                                    <h3 class="box-title">Safety & Security</h3>
+                                    <p class="box-text">Safety Gard films add an extra layer of protection against shattering glass.</p>
                                 </div>
                             </div>
                         </div>
@@ -185,8 +190,8 @@ Feature Area
                                     <img src="/assets/img/icon/choose_feature_5.svg" alt="icon">
                                 </div>
                                 <div class="media-body">
-                                    <h3 class="box-title">Illuminate Interiors</h3>
-                                    <p class="box-text">We specialize in a wide range of projects, including residential</p>
+                                    <h3 class="box-title">Style Up Your Space</h3>
+                                    <p class="box-text">Enhance your building's aesthetics with a variety of decorative window tint options.</p>
                                 </div>
                             </div>
                         </div>
@@ -209,10 +214,7 @@ Service Area
         <div class="row justify-content-lg-between align-items-end">
             <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="title-area">
-                    <h2 class="sec-title">High-quality architectural
-                        <span class="text-transparent">services</span>
-                    </h2>
-                </div>
+                    <h2 class="sec-title">OUR TOP QUALITY <span class="text-transparent">services</span></h2>                </div>
             </div>
             <div class="col-auto mt-n4 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="sec-btn">
@@ -227,33 +229,53 @@ Service Area
                     <div>
                         <div class="service-list">
                             <span class="service-list_number">01</span>
-                            <h4 class="service-list_title">Architecture</h4>
+                            <h4 class="service-list_title">Solar Control</h4>
                         </div>
                     </div>
                     <div>
                         <div class="service-list">
                             <span class="service-list_number">02</span>
-                            <h4 class="service-list_title">Interior Design</h4>
+                            <h4 class="service-list_title">Safety & Security</h4>
                         </div>
                     </div>
                     <div>
                         <div class="service-list">
                             <span class="service-list_number">03</span>
-                            <h4 class="service-list_title">Urban Interventions</h4>
+                            <h4 class="service-list_title">Decorative</h4>
                         </div>
                     </div>
                     <div>
                         <div class="service-list">
                             <span class="service-list_number">04</span>
-                            <h4 class="service-list_title">Landscape Design</h4>
+                            <h4 class="service-list_title">Smart Window</h4>
                         </div>
                     </div>
                     <div>
                         <div class="service-list">
                             <span class="service-list_number">05</span>
-                            <h4 class="service-list_title">Interdisciple Entity</h4>
+                            <h4 class="service-list_title">Transparent Window Film</h4>
                         </div>
                     </div>
+			 <div>
+                        <div class="service-list">
+                            <span class="service-list_number">06</span>
+                            <h4 class="service-list_title">Glass Manifestation & Legalisation</h4>
+                        </div>
+                    </div>
+			<div>
+                        <div class="service-list">
+                            <span class="service-list_number">07</span>
+                            <h4 class="service-list_title">Contra Vision Graphics</h4> 
+                        </div>
+                    </div>
+			<div>
+                        <div class="service-list">
+                            <span class="service-list_number">08</span>
+                            <h4 class="service-list_title">Digital Wallpapers</h4> 
+                        </div>
+                    </div>
+
+
                 </div>
                 <button data-slick-next="#sr-list" class="slick-btn bottom"><i class="fal fa-chevron-down"></i></button>
             </div>
@@ -266,75 +288,75 @@ Service Area
                             <div class="service-card_icon">
                                 <img class="svg-img" src="{{@$service->image}}" alt="service image">
                             </div>
-                            <p class="service-card_num text-transparent">01</p>
+                            <p class="service-card_num text-transparent"></p>
                             <h3 class="service-card_title">{{@$service->title}}</h3>
                             <p class="service-card_text">{{@$service->excerpt}}</p>
-                            <a href="{{route('service-detail',[@$service->slug])}}" class="link-btn">View Details</a>
+                            <a href="{{route('service-detail',[@$service->subMenu->slug])}}" class="link-btn">View Details</a>
                         </div>
                     </div>
                     @endforeach
 
-
-                    <div>
-                        <div class="service-card style2">
-                            <div class="service-card_icon">
-                                <img class="svg-img" src="/assets/img/icon/service_1_1.svg" alt="service image">
-                            </div>
-                            <p class="service-card_num text-transparent">01</p>
-                            <h3 class="service-card_title">Architecture</h3>
-                            <p class="service-card_text">We see architecture as the composition of all elements that define a particular space and inform the character of a building.</p>
-                            <a href="#" class="link-btn">View Details</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="service-card style2">
-                            <div class="service-card_icon">
-                                <img class="svg-img" src="/assets/img/icon/service_1_2.svg" alt="service image">
-                            </div>
-                            <p class="service-card_num text-transparent">02</p>
-                            <h3 class="service-card_title">Interior Design</h3>
-                            <p class="service-card_text">In Order architecture as the composition of all elements that define a particular space and inform the character of a interior.</p>
-                            <a href="#" class="link-btn">View Details</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="service-card style2">
-                            <div class="service-card_icon">
-                                <img class="svg-img" src="/assets/img/icon/service_1_3.svg" alt="service image">
-                            </div>
-                            <p class="service-card_num text-transparent">03</p>
-                            <h3 class="service-card_title">Urban Interventions</h3>
-                            <p class="service-card_text">The Urban architecture as the composition of all elements that define a particular space and inform the character of into.</p>
-                            <a href="#" class="link-btn">View Details</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="service-card style2">
-                            <div class="service-card_icon">
-                                <img class="svg-img" src="/assets/img/icon/service_1_4.svg" alt="service image">
-                            </div>
-                            <p class="service-card_num text-transparent">04</p>
-                            <h3 class="service-card_title">Landscape Design</h3>
-                            <p class="service-card_text">The Best architecture as composition of all elements that define a particular space and inform the character of a Landscape.</p>
-                            <a href="#" class="link-btn">View Details</a>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="service-card style2">
-                            <div class="service-card_icon">
-                                <img class="svg-img" src="/assets/img/icon/service_1_5.svg" alt="service image">
-                            </div>
-                            <p class="service-card_num text-transparent">05</p>
-                            <h3 class="service-card_title">Interdisciple Entity</h3>
-                            <p class="service-card_text">You see architecture as the composition of all elements that define a particular space and inform the character of a Gowring.</p>
-                            <a href="#" class="link-btn">View Details</a>
-                        </div>
-                    </div>
+<!-- <div>
+    <div class="service-card style2">
+        <div class="service-card_icon">
+            <img class="svg-img" src="/assets/img/icon/service_1_1.svg" alt="service image">
+        </div>
+        <p class="service-card_num text-transparent">01</p>
+        <h3 class="service-card_title">Architecture</h3>
+        <p class="service-card_text">We see architecture as the composition of all elements that define a particular space and inform the character of a building.</p>
+        <a href="#" class="link-btn">View Details</a>
+    </div>
+</div>
+<div>
+    <div class="service-card style2">
+        <div class="service-card_icon">
+            <img class="svg-img" src="/assets/img/icon/service_1_2.svg" alt="service image">
+        </div>
+        <p class="service-card_num text-transparent">02</p>
+        <h3 class="service-card_title">Interior Design</h3>
+        <p class="service-card_text">In Order architecture as the composition of all elements that define a particular space and inform the character of a interior.</p>
+        <a href="#" class="link-btn">View Details</a>
+    </div>
+</div>
+<div>
+    <div class="service-card style2">
+        <div class="service-card_icon">
+            <img class="svg-img" src="/assets/img/icon/service_1_3.svg" alt="service image">
+        </div>
+        <p class="service-card_num text-transparent">03</p>
+        <h3 class="service-card_title">Urban Interventions</h3>
+        <p class="service-card_text">The Urban architecture as the composition of all elements that define a particular space and inform the character of into.</p>
+        <a href="#" class="link-btn">View Details</a>
+    </div>
+</div>
+<div>
+    <div class="service-card style2">
+        <div class="service-card_icon">
+            <img class="svg-img" src="/assets/img/icon/service_1_4.svg" alt="service image">
+        </div>
+        <p class="service-card_num text-transparent">04</p>
+        <h3 class="service-card_title">Landscape Design</h3>
+        <p class="service-card_text">The Best architecture as composition of all elements that define a particular space and inform the character of a Landscape.</p>
+        <a href="#" class="link-btn">View Details</a>
+    </div>
+</div>
+<div>
+    <div class="service-card style2">
+        <div class="service-card_icon">
+            <img class="svg-img" src="/assets/img/icon/service_1_5.svg" alt="service image">
+        </div>
+        <p class="service-card_num text-transparent">05</p>
+        <h3 class="service-card_title">Interdisciple Entity</h3>
+        <p class="service-card_text">You see architecture as the composition of all elements that define a particular space and inform the character of a Gowring.</p>
+        <a href="#" class="link-btn">View Details</a>
+    </div>
+</div> -->
+                    
 
 
                 </div>
             </div>
-            <div class="service-grid-img">
+            {{--<div class="service-grid-img">
                 <div class="th-carousel" id="sr-img" data-slide-show="1" data-md-slide-show="1" data-asnavfor="#sr-grid, #sr-list">
                     
                 @foreach(@$services as $service)
@@ -374,96 +396,47 @@ Service Area
 
 
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>
 
-  <!--==============================>
-Team Area  
+  <!--==============================
+Counter Area  
 ==============================-->
-<section class="gallery gal ">
-    <div class="container">
-        <h2 class="sec-title text-center mb-4 wow fadeInUp" data-wow-delay="0.2s">Gallery <span class="text-transparent"></span></h2>
-        <div class="row th-carousel" data-slide-show="4" data-lg-slide-show="3" data-md-slide-show="2">
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="team-card  ">
-                    <!-- <p class="team-desig">Architecture Designer</p>
-                    <h3 class="h5 team-title"><a href="team-details.html">Kevin Martin</a></h3> -->
-                    <!-- <div class="th-social">
-                        <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                        <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    </div> -->
-                    <div class="team-img">
-                        <img src="/assets/img/team/team_2_1.jpg" alt="Team">
-                    </div>
-                </div>
-            </div>
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="team-card  ">
-                    <!-- <p class="team-desig">Interior Designer</p>
-                    <h3 class="h5 team-title"><a href="team-details.html">Jonas Malini</a></h3> -->
-                    <!-- <div class="th-social">
-                        <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                        <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    </div> -->
-                    <div class="team-img">
-                        <img src="/assets/img/team/team_2_2.jpg" alt="Team">
-                    </div>
-                </div>
-            </div>
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="team-card  ">
-                    <!-- <p class="team-desig">3D Autocad Designer</p>
-                    <h3 class="h5 team-title"><a href="team-details.html">Aiden Samuel</a></h3> -->
-                    <!-- <div class="th-social">
-                        <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                        <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    </div> -->
-                    <div class="team-img">
-                        <img src="/assets/img/team/team_2_3.jpg" alt="Team">
-                    </div>
-                </div>
-            </div>
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="team-card  ">
-                    <!-- <p class="team-desig">Interior Designer</p>
-                    <h3 class="h5 team-title"><a href="team-details.html">Andrew Maria</a></h3> -->
-                    <!-- <div class="th-social">
-                        <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                        <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    </div> -->
-                    <div class="team-img">
-                        <img src="/assets/img/team/team_2_4.jpg" alt="Team">
-                    </div>
-                </div>
-            </div>
-            <!-- Single Item -->
-            <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
-                <div class="team-card  ">
-                    <!-- <p class="team-desig">3D Autocad Designer</p>
-                    <h3 class="h5 team-title"><a href="team-details.html">Joseph Carter</a></h3> -->
-                    <!-- <div class="th-social">
-                        <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                        <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    </div> -->
-                    <div class="team-img">
-                        <img src="/assets/img/team/team_2_5.jpg" alt="Team">
+    <section class="space-bottom countsec">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xxl-10 col-lg-12 ">
+                    <div class="row align-items-center countsec">
+                        <div class="col-auto wow fadeInUp" data-wow-delay="0.1s">
+                            <span class="big-title mb-4 mb-md-0">SG.  </span>
+                        </div>
+                        <div class="col-auto">
+                            <div class="counter-card-wrap">
+                                <div class="counter-card wow fadeInUp" data-wow-delay="0.2s">
+                                    <h3 class="counter-card_number"><span class="counter-number">600</span></h3>
+                                    <p class="counter-card_text">Projects</p>
+                                </div>
+                                <div class="counter-card wow fadeInUp" data-wow-delay="0.3s">
+                                    <h3 class="counter-card_number"><span class="counter-number">60</span></h3>
+                                    <p class="counter-card_text">Clients</p>
+                                </div>
+                                <div class="counter-card wow fadeInUp" data-wow-delay="0.4s">
+                                    <h3 class="counter-card_number"><span class="counter-number">200</span></h3>
+                                    <p class="counter-card_text">Employees</p>
+                                </div>
+                                <div class="counter-card wow fadeInUp" data-wow-delay="0.5s">
+                                    <h3 class="counter-card_number"><span class="counter-number">10000</span></h3>
+                                    <p class="counter-card_text">Tinted Windows</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
  <!--==============================
@@ -540,32 +513,32 @@ Testimonial Area
     <h1>Frequently Asked Questions</h1>
     <div class="accordion-item">
         <input type="checkbox" id="accordion1">
-        <label for="accordion1" class="accordion-item-title"><span class="icon"></span>What is SEO, and why is it important for online businesses?</label>
-        <div class="accordion-item-desc">SEO, or Search Engine Optimization, is the practice of optimizing a website to improve its visibility on search engines like Google. It involves various techniques to enhance a site's ranking in search results. SEO is crucial for online businesses as it helps drive organic traffic, increases visibility, and ultimately leads to higher conversions.</div>
+        <label for="accordion1" class="accordion-item-title"><span class="icon"></span>Is window tinting legal in Dubai?</label>
+        <div class="accordion-item-desc">Yes, window tinting is legal in Dubai, but there are regulations on the level of tint allowed. Safety Gard Dubai offers films that comply with all local regulations.</div>
     </div>
 
     <div class="accordion-item">
         <input type="checkbox" id="accordion2">
-        <label for="accordion2" class="accordion-item-title"><span class="icon"></span>How long does it take to see results from SEO efforts?</label>
-        <div class="accordion-item-desc">The timeline for seeing results from SEO can vary based on several factors, such as the competitiveness of keywords, the current state of the website, and the effectiveness of the SEO strategy. Generally, it may take several weeks to months before noticeable improvements occur. However, long-term commitment to SEO is essential for sustained success.</div>
+        <label for="accordion2" class="accordion-item-title"><span class="icon"></span>What are the benefits of window tinting for my home?</label>
+        <div class="accordion-item-desc">Homeowners enjoy increased privacy, reduced energy costs, UV protection for furniture, and a cooler living environment.</div>
     </div>
 
     <div class="accordion-item">
         <input type="checkbox" id="accordion3">
-        <label for="accordion3" class="accordion-item-title"><span class="icon"></span>What are the key components of a successful SEO strategy?</label>
-        <div class="accordion-item-desc">A successful SEO strategy involves various components, including keyword research, on-page optimization, quality content creation, link building, technical SEO, and user experience optimization. These elements work together to improve a website's relevance and authority in the eyes of search engines.</div>
+        <label for="accordion3" class="accordion-item-title"><span class="icon"></span>Does window tinting make my windows darker?</label>
+        <div class="accordion-item-desc">Yes, but Safety Gard Dubai offers a variety of film shades to achieve your desired level of darkness while still maintaining good visibility.</div>
     </div>
 
     <div class="accordion-item">
         <input type="checkbox" id="accordion4">
-        <label for="accordion4" class="accordion-item-title"><span class="icon"></span>How does mobile optimization impact SEO?</label>
-        <div class="accordion-item-desc">Mobile optimization is crucial for SEO because search engines prioritize mobile-friendly websites. With the increasing use of smartphones, search engines like Google consider mobile responsiveness as a ranking factor. Websites that provide a seamless experience on mobile devices are more likely to rank higher in search results.</div>
+        <label for="accordion4" class="accordion-item-title"><span class="icon"></span>How long does window tinting typically last?</label>
+        <div class="accordion-item-desc">High-quality films, like those offered by Safety Gard Dubai, can last for many years with proper care.</div>
     </div>
 
     <div class="accordion-item">
         <input type="checkbox" id="accordion5">
-        <label for="accordion5" class="accordion-item-title"><span class="icon"></span>What is the role of backlinks in SEO, and how can they be acquired?</label>
-        <div class="accordion-item-desc">Backlinks, or inbound links from other websites to yours, play a significant role in SEO. They are considered a vote of confidence and can improve a site's authority. Quality over quantity is crucial when acquiring backlinks. Strategies for obtaining backlinks include creating high-quality content, guest posting, reaching out to industry influencers, and participating in community activities. It's important to focus on natural and ethical link-building practices.</div>
+        <label for="accordion5" class="accordion-item-title"><span class="icon"></span>Do you offer a warranty on your window tinting services?</label>
+        <div class="accordion-item-desc">Yes, Safety Gard Dubai provides a comprehensive warranty on both the film and the installation process.</div>
     </div>
 
 </div>
@@ -583,10 +556,8 @@ Blog Area
         <div class="row justify-content-md-between align-items-end">
             <div class="col-md-8 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="title-area">
-                    <span class="big-title">B.</span>
-                    <h2 class="sec-title">Fresh <span class="text-theme">Blog</span> content <br>
-                        just published
-                    </h2>
+                    <span class="big-title">C.</span>
+                    <h2 class="sec-title">Updates On <span class="text-theme">What's Happening At</span><br>Safety Gard.</h2>  
                 </div>
             </div>
             <div class="col-auto mt-n4 mt-lg-0 wow fadeInUp" data-wow-delay="0.3s">

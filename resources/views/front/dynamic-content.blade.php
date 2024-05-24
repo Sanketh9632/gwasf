@@ -36,41 +36,41 @@
     <!--==============================
 About Area  
 ==============================-->
-<div class="space-top">
+<div class="space-top mb-5">
     <div class="container">
         <div class="row">
             <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
                 <div class="img-box3">
-                    <div class="img1">
-                        <img src="/assets/img/normal/about_2_1.jpg" alt="About">
+                    <div class="">
+                        <img src="{{@$dynamic_contents->image}}" alt="About">
                     </div>
                     <div class="img2">
-                        <img src="/assets/img/normal/about_2_2.jpg" alt="About">
+                        <img src="{{@$dynamic_contents->icon}}" alt="About">
                     </div>
                 </div>
             </div>
             <div class="col-xl-6 align-self-center wow fadeInRight" data-wow-delay="0.2s">
                 <span class="big-title mb-35">A.</span>
-                <p class="sub-title">Eraclis Papachristou Architectural Office</p>
-                <h2 class="sec-title mb-40">Two decades of
-                    <span class="text-theme">architecture</span>
+                <p class="sub-title">Safety Gard Dubai: About Us</p>
+                <h2 class="sec-title mb-40">Dubai's Window Tinting Experts,
+                    <span class="text-theme">Dedicated to your Comfort</span>
                 </h2>
 
                 {!! removeExtraChar(@$dynamic_contents->body) !!}
                 
-                <p class="mb-4">Eraclis Papachristou Architects is one of the most established architectural offices in Cyprus. This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion of various projects, especially in the last ten years.</p>
-                <p class="mb-40">This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion.</p>
+                {{-- <p class="mb-4">Eraclis Papachristou Architects is one of the most established architectural offices in Cyprus. This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion of various projects, especially in the last ten years.</p>
+                <p class="mb-40">This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion.</p> --}}
                 <a href="/about-us" class="th-btn"><span class="line left"></span> About Us <span class="line"></span></a>
             </div>
         </div>
     </div>
-    <div class="shape-mockup jump" data-top="-15%" data-right="0"><img src="/assets/img/shape/shape_3.png" alt="shape"></div>
+{{--    <div class="shape-mockup jump" data-top="-15%" data-right="0"><img src="/assets/img/shape/shape_3.png" alt="shape"></div> --}}
 </div><!--==============================
 Testimonial Area  
 ==============================-->
-    <section class="position-relative overflow-hidden space-top">
+    {{-- <section class="position-relative overflow-hidden space-top">
         <div class="testi-video-slide th-carousel" id="testiVideo" data-asnavfor="#testiSlide1" data-slide-show="1" data-fade="true">
-            <div>
+           <div>
                 <span class="big-title">VIDEO</span>
                 <div class="testi-video">
                     <img src="/assets/img/testimonial/testi_bg_1_1.jpg" alt="video">
@@ -96,16 +96,18 @@ Testimonial Area
             <div class="testi-box-wrap wow fadeInRight" data-wow-delay="0.2s">
                 <h3 class="text-uppercase mt-n2 mb-30">WHAT <span class="text-transparent">CLIENT'S SAY?</span></h3>
                 <div class="row testi-box-slide th-carousel" id="testiSlide1" data-asnavfor="#testiVideo" data-slide-show="1" data-fade="true">
-                    <div class="col-lg-6">
+		
+		@foreach(@$testimonial as $test)                    
+		<div class="col-lg-6">
                         <div class="testi-box">
-                            <p class="testi-box_text">In mattis molestie iaculis. Nullam sit amet sem risus. Vivamus id ligula dignissim, aliquam elit quis, semper justo. Suspendisse lobortis gravida urna, ut luctus ex interdum sed. Aenean sit amet urna eros. Suspendisse quis felis eu nunc aliquet aliquam. Sed fermentum id purus et mollis. Maecenas non turpis ut magna auctor lacinia.</p>
+                            <p class="testi-box_text">{!!@$test->body!!}</p>
                             <div class="testi-box_profile">
                                 <div class="testi-box_img">
                                     <img src="/assets/img/testimonial/testi_1_1.jpg" alt="Avater">
                                 </div>
                                 <div class="testi-box_info">
-                                    <h3 class="testi-box_name">Ricardo Yosef</h3>
-                                    <span class="testi-box_desig">CEO Founder</span>
+                                    <h3 class="testi-box_name">{{@$test->title}}</h3>
+                                    <span class="testi-box_desig">{{@$test->designation}}</span>
                                 </div>
                             </div>
                             <div class="testi-box_icon">
@@ -113,6 +115,9 @@ Testimonial Area
                             </div>
                         </div>
                     </div>
+		    @endforeach
+
+
                     <div class="col-lg-6">
                         <div class="testi-box">
                             <p class="testi-box_text">Nullam sit molestie iaculis. Nullam sit amet sem risus. Vivamus id ligula dignissim, aliquam elit quis, semper justo. Suspendisse lobortis gravida urna, ut luctus ex interdum sed. Aenean sit amet urna eros. Suspendisse quis felis eu nunc aliquet aliquam. Sed fermentum id purus et mollis. Maecenas non turpis ut magna auctor mollis.</p>
@@ -147,6 +152,8 @@ Testimonial Area
                             </div>
                         </div>
                     </div>
+
+
                 </div>
                 <div class="icon-box style1">
                     <button data-slick-prev="#testiSlide1" class="slick-arrow default"><i class="fat fa-long-arrow-left"></i></button>
@@ -154,11 +161,11 @@ Testimonial Area
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!--==============================
 Team Area  
 ==============================-->
-    <section class="space">
+    {{-- <section class="space">
         <div class="container">
             <div class="row justify-content-lg-between align-items-end">
                 <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
@@ -271,10 +278,11 @@ Team Area
                 </div>
             </div>
         </div>
-    </section><!--==============================
+    </section> --}}
+<!--==============================
 Counter Area  
 ==============================-->
-<section class="space-bottom">
+{{-- <section class="space-bottom">
       <div class="container">
           <div class="row justify-content-center">
               <div class="col-xxl-10">
@@ -306,13 +314,30 @@ Counter Area
               </div>
           </div>
       </div>
-  </section>
+  </section> --}}
 
 @elseif($parent_menu_id->layout_name == 'SERVICES')
 
 <section class="space-top">
     <div class="container">
-        <div class="row gy-30">
+        <div class="row">
+
+	   <div class="col-xl-12 col-lg-12 align-self-center wow fadeInRight" data-wow-delay="0.2s">
+                <div class="page-single">
+                    {{-- <div class="page-img">
+                        <img class="w-100" src="{{@$dynamic_contents->image}}" alt="Service Image">
+                    </div> --}}
+                    <h2 class="sec-title mb-40">
+                    <span class="text-theme">{{@$dynamic_contents->title}}</span>
+                    </h2>
+                    <div class="service-content">
+
+                        {!! removeExtraChar(@$dynamic_contents->body) !!}
+
+                    </div>
+                </div>
+
+            </div>
 
             @foreach(@$services as $service)
             <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
@@ -320,8 +345,8 @@ Counter Area
                     <div class="service-card_icon">
                         <img class="svg-img" src="{{@$service->image}}" alt="service image">
                     </div>
-                    <p class="service-card_num">01</p>
-                    <a href="{{route('service-detail',[@$service->slug])}}">
+                    {{-- <p class="service-card_num">0{{@$key+1}}</p> --}}
+                    <a href="{{route('service-detail',[@$service->subMenu->slug])}}">
                         <h3 class="service-card_title">{{@$service->title}}</h3>
                     </a>
                     <p class="service-card_text">{{@$service->excerpt}}</p>
@@ -329,7 +354,7 @@ Counter Area
             </div>
             @endforeach
 
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+            {{-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="service-card">
                     <div class="service-card_icon">
                         <img class="svg-img" src="assets/img/icon/service_1_1.svg" alt="service image">
@@ -388,7 +413,7 @@ Counter Area
                     <h3 class="service-card_title">Safety Guard Everything</h3>
                     <p class="service-card_text">Safety Guard is architecture as the composition of all elements that define a particular space and inform the character of Design.</p>
                 </div>
-            </div>
+            </div> --}}
 
 
         </div>
@@ -451,24 +476,58 @@ Job Area
 
 @else
 
-<section class="space-top space-extra-bottom">
+<section class="space-top">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
+            <div class="col-xl-12 col-lg-12 align-self-center wow fadeInRight" data-wow-delay="0.2s">
                 <div class="page-single">
-                    <div class="page-img">
+                    {{-- <div class="page-img">
                         <img class="w-100" src="{{@$dynamic_contents->image}}" alt="Service Image">
-                    </div>
-                    <h3 class="single-title">{{@$dynamic_contents->title}}</h3>
+                    </div> --}}
+                    <h2 class="sec-title mb-40">
+                    <span class="text-theme">{{@$dynamic_contents->title}}</span>
+		    </h2>
                     <div class="service-content">
 
                         {!! removeExtraChar(@$dynamic_contents->body) !!}
 
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
+
+@if(@$services)
+   <section class="">
+      <div class="container">
+        <div class="row gy-30">
+
+          @foreach(@$services as $service)
+      	  @if(@$parent_menu_id->slug == Str::lower(@$service->constant))
+	    <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="service-card">
+              <div class="service-card_icon">
+                <img class="svg-img" src="{{@$service->image}}" alt="service image"/>
+              </div>
+              {{-- <p class="service-card_num">0{{@$key+1}}</p> --}}
+              <h3 class="service-card_title">
+                <a href="{{route('service-detail',[@$service->subMenu->slug])}}">{{@$service->title}}</a>
+              </h3>
+
+              <p class="service-card_text">
+                {!! removeExtraChar(@$service->excerpt) !!}
+              </p>
+            </div>
+          </div>
+	  @endif
+          @endforeach
+
+	</div>
+	</div>
+</section>
+@endif
+
 </section
 
 @endif

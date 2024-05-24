@@ -35,7 +35,7 @@ $(document).ready(function () {
   $(".course").hide();
 
   if (actual_parent_slug != null) {
-    if (actual_parent_slug == "case-studies") {
+    if (actual_parent_slug == "blog") {
       $(".news").show();
       $(".tab").hide();
       $("#event_date").attr("required", true);
@@ -45,6 +45,7 @@ $(document).ready(function () {
       $(".body1").hide();
       $("#excerpt").attr("maxlength", "400");
       $("#long_desc1").html("Why Us");
+      $(".icon").show();
     }
 
     if (actual_parent_slug == "courses") {
@@ -127,7 +128,7 @@ $("#parent_menu_id").change(function (e) {
     $(".icon").hide();
     //$(".course").hide();
 
-    if (slug == "case-studies") {
+    if (slug == "blog") {
       $(".news").show();
       $(".tab").hide();
       $(".body1").hide();
@@ -143,6 +144,7 @@ $("#parent_menu_id").change(function (e) {
       $(".body1").hide();
       $("#excerpt").attr("maxlength", "400");
       $("#long_desc1").html("Why Us");
+	$(".icon").show();
     } else {
       $(".body1").hide();
       $(".body2").hide();

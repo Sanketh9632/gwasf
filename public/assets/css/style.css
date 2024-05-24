@@ -6689,7 +6689,7 @@ blockquote cite:before {
 }
 
 .service-card_icon {
-  height: 95px;
+//  height: 95px;
   margin-bottom: 35px;
   display: grid;
   -webkit-box-align: end;
@@ -13234,4 +13234,84 @@ html:not(html:hover) .th-cursor::after {
     -webkit-transform: translateX(calc(-250px * 7));
     transform: translateX(calc(-250px * 7));
   }
+}
+.img-box2{
+margin-top: 22%;
+}
+
+#about-sec{
+margin-top: -9%;
+}
+
+.flogo{
+margin-top: -7%;
+margin-left: 5%;
+}
+
+.footer-widget img{
+margin-left: 5%;
+}
+.th-social{
+background-color:#272727;
+text-align:center;
+padding-top: 1%;
+padding-bottom: 1%;
+
+}
+@media screen and (max-width: 938px) {
+.th-social{
+background-color:#272727;
+text-align:center;
+padding-top: 3%;
+padding-bottom: 3%;
+}
+
+.th-social a {
+font-size:16px;
+}
+
+#about-sec{
+margin-top:-30%
+}
+.rest{
+margin-left:8%;
+margin-right:8%;
+}
+.why {
+  margin-top: -35%;
+  margin-bottom: -25%;
+}
+.spaces a h4{
+margin-left:-15%;
+margin-right:-15%;
+}
+
+.spaces{
+margin-bottom: -48%;
+}
+
+.space{
+margin-top: -18%;
+}
+
+}
+
+
+.spaces a h4{
+margin-left:-15%;
+margin-right:-15%;
+}
+
+.spaces{
+margin-bottom: -10%;
+}
+
+.space{
+margin-bottom: -10%;
+}
+
+.countsec{
+margin-top: 5%;
+margin-bottom:-6%
+
 }

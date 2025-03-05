@@ -464,15 +464,19 @@ class PostController extends Controller
     return view('front.all-news', compact('recent_news', 'latest_news', 'news_menu_id', 'categories'));
   }
 
-  public function getServiceDetail($slug = null)
+  public function getServiceDetail($slug = null, $child_slug = null)
   {
     $parent_menu_id = ParentMenu::select('slug', 'id', 'name')->where('slug', 'services')->first();
     $sub_menu_id = SubMenu::select('slug', 'id', 'name')->where('slug', $slug)->first();
-
+    $child_menu_id = ChildMenu::select('slug', 'id', 'name')->where('slug', $child_slug)->first();
+//dd($child_menu_id);
     $services = Post::join('sub_menus', function ($sub_menus) {
       $sub_menus->on('sub_menus.id', 'posts.child_menu_id');
     })->select('posts.*')->where('posts.parent_menu_id', @$parent_menu_id->id)->orderBy('sub_menus.hierarchy')->whereNull('posts.deleted_at')->get();
 
+    if($child_slug)
+    $dynamic_content = Post::where('child_menu_id', $child_menu_id->id)->first();
+    else
     $dynamic_content = Post::where('sub_menu_id', $sub_menu_id->id)->first();
 
     if (@$dynamic_content->tab_section == 'Y') {

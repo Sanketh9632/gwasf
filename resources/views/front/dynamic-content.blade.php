@@ -3,7 +3,7 @@
 @section('meta')
 
 @section('title', ucwords(strtolower((@$dynamic_contents['seo_title']))))
-<meta name="author" content="Safety Guard">
+<meta name="author" content="GWASF">
 <meta name="description" content="{!! @$dynamic_contents['meta_description'] !!}">
 <meta name="keywords" content="{!! @$dynamic_contents['meta_keywords'] !!}">
 
@@ -21,404 +21,264 @@
 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-<div class="container th-container2">
-    <div class="breadcumb-wrapper  " data-bg-src="{{@$dynamic_contents->banner_image ?  @$dynamic_contents->banner_image : '/assets/img/breadcumb/breadcumb-bg-2.jpg'}}">
-        <h1 class="breadcumb-title">@if(@$child_menu_id->name) {{ @$child_menu_id->name }} @elseif(@$sub_menu_id->name) {{ @$sub_menu_id->name }} @else {{ @$parent_menu_id->name }} @endif</h1>
-        <ul class="breadcumb-menu">
-            <li><a href="{{route('home')}}">Home</a></li>
-            <li>@if(@$child_menu_id->name) {{ @$child_menu_id->name }} @elseif(@$sub_menu_id->name) {{ @$sub_menu_id->name }} @else {{ @$parent_menu_id->name }} @endif</li>
-        </ul>
-    </div>
-</div>
-
-@if($parent_menu_id->layout_name == 'ABOUT')
-
-    <!--==============================
-About Area  
-==============================-->
-<div class="space-top mb-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
-                <div class="img-box3">
-                    <div class="">
-                        <img src="{{@$dynamic_contents->image}}" alt="About">
-                    </div>
-                    <div class="img2">
-                        <img src="{{@$dynamic_contents->icon}}" alt="About">
-                    </div>
+<section class="page-title" style="background-image: url({{ @$dynamic_contents->banner_image ? @$dynamic_contents->banner_image : '/assets/images/background/bg-9.jpg' }});">
+    <div class="auto-container">
+        <div class="content-box">
+            <div class="content-wrapper">
+                <div class="title">
+                    <h1>
+                        @if(@$child_menu_id->name) 
+                            {{ @$child_menu_id->name }} 
+                        @elseif(@$sub_menu_id->name) 
+                            {{ @$sub_menu_id->name }} 
+                        @else 
+                            {{ @$parent_menu_id->name }} 
+                        @endif
+                    </h1>
                 </div>
-            </div>
-            <div class="col-xl-6 align-self-center wow fadeInRight" data-wow-delay="0.2s">
-                <span class="big-title mb-35">A.</span>
-                <p class="sub-title">Safety Gard Dubai: About Us</p>
-                <h2 class="sec-title mb-40">Dubai's Window Tinting Experts,
-                    <span class="text-theme">Dedicated to your Comfort</span>
-                </h2>
-
-                {!! removeExtraChar(@$dynamic_contents->body) !!}
-                
-                {{-- <p class="mb-4">Eraclis Papachristou Architects is one of the most established architectural offices in Cyprus. This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion of various projects, especially in the last ten years.</p>
-                <p class="mb-40">This is mainly due to its experimental attitude to construction methods along with innovative design in conjunction with the successful completion.</p> --}}
-                <a href="/about-us" class="th-btn"><span class="line left"></span> About Us <span class="line"></span></a>
-            </div>
-        </div>
-    </div>
-{{--    <div class="shape-mockup jump" data-top="-15%" data-right="0"><img src="/assets/img/shape/shape_3.png" alt="shape"></div> --}}
-</div><!--==============================
-Testimonial Area  
-==============================-->
-    {{-- <section class="position-relative overflow-hidden space-top">
-        <div class="testi-video-slide th-carousel" id="testiVideo" data-asnavfor="#testiSlide1" data-slide-show="1" data-fade="true">
-           <div>
-                <span class="big-title">VIDEO</span>
-                <div class="testi-video">
-                    <img src="/assets/img/testimonial/testi_bg_1_1.jpg" alt="video">
-                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn style2 popup-video"><i class="fas fa-play"></i></a>
-                </div>
-            </div>
-            <div>
-                <span class="big-title">VIDEO</span>
-                <div class="testi-video">
-                    <img src="/assets/img/testimonial/testi_bg_1_3.jpg" alt="video">
-                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn style2 popup-video"><i class="fas fa-play"></i></a>
-                </div>
-            </div>
-            <div>
-                <span class="big-title">VIDEO</span>
-                <div class="testi-video">
-                    <img src="/assets/img/testimonial/testi_bg_1_3.jpg" alt="video">
-                    <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn style2 popup-video"><i class="fas fa-play"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="testi-box-area">
-            <div class="testi-box-wrap wow fadeInRight" data-wow-delay="0.2s">
-                <h3 class="text-uppercase mt-n2 mb-30">WHAT <span class="text-transparent">CLIENT'S SAY?</span></h3>
-                <div class="row testi-box-slide th-carousel" id="testiSlide1" data-asnavfor="#testiVideo" data-slide-show="1" data-fade="true">
-		
-		@foreach(@$testimonial as $test)                    
-		<div class="col-lg-6">
-                        <div class="testi-box">
-                            <p class="testi-box_text">{!!@$test->body!!}</p>
-                            <div class="testi-box_profile">
-                                <div class="testi-box_img">
-                                    <img src="/assets/img/testimonial/testi_1_1.jpg" alt="Avater">
-                                </div>
-                                <div class="testi-box_info">
-                                    <h3 class="testi-box_name">{{@$test->title}}</h3>
-                                    <span class="testi-box_desig">{{@$test->designation}}</span>
-                                </div>
-                            </div>
-                            <div class="testi-box_icon">
-                                <img src="/assets/img/testimonial/testi_icon_1.svg" alt="icon">
-                            </div>
-                        </div>
-                    </div>
-		    @endforeach
-
-
-                    <div class="col-lg-6">
-                        <div class="testi-box">
-                            <p class="testi-box_text">Nullam sit molestie iaculis. Nullam sit amet sem risus. Vivamus id ligula dignissim, aliquam elit quis, semper justo. Suspendisse lobortis gravida urna, ut luctus ex interdum sed. Aenean sit amet urna eros. Suspendisse quis felis eu nunc aliquet aliquam. Sed fermentum id purus et mollis. Maecenas non turpis ut magna auctor mollis.</p>
-                            <div class="testi-box_profile">
-                                <div class="testi-box_img">
-                                    <img src="/assets/img/testimonial/testi_1_2.jpg" alt="Avater">
-                                </div>
-                                <div class="testi-box_info">
-                                    <h3 class="testi-box_name">Santino Pedro</h3>
-                                    <span class="testi-box_desig">Bank Manager</span>
-                                </div>
-                            </div>
-                            <div class="testi-box_icon">
-                                <img src="/assets/img/testimonial/testi_icon_1.svg" alt="icon">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="testi-box">
-                            <p class="testi-box_text">Id ligula molestie iaculis. Nullam sit amet sem risus. Vivamus id ligula dignissim, aliquam elit quis, semper justo. Suspendisse lobortis gravida urna, ut luctus ex interdum sed. Aenean sit amet urna eros. Suspendisse quis felis eu nunc aliquet aliquam. Sed fermentum id purus et mollis. Maecenas non turpis ut magna auctor turpis.</p>
-                            <div class="testi-box_profile">
-                                <div class="testi-box_img">
-                                    <img src="/assets/img/testimonial/testi_1_3.jpg" alt="Avater">
-                                </div>
-                                <div class="testi-box_info">
-                                    <h3 class="testi-box_name">Marcos Manuel </h3>
-                                    <span class="testi-box_desig">CEO Founder</span>
-                                </div>
-                            </div>
-                            <div class="testi-box_icon">
-                                <img src="/assets/img/testimonial/testi_icon_1.svg" alt="icon">
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="icon-box style1">
-                    <button data-slick-prev="#testiSlide1" class="slick-arrow default"><i class="fat fa-long-arrow-left"></i></button>
-                    <button data-slick-next="#testiSlide1" class="slick-arrow default"><i class="fat fa-long-arrow-right"></i></button>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-    <!--==============================
-Team Area  
-==============================-->
-    {{-- <section class="space">
-        <div class="container">
-            <div class="row justify-content-lg-between align-items-end">
-                <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="title-area">
-                        <span class="big-title">E.</span>
-                        <h2 class="sec-title">Expert
-                            <span class="text-transparent">members</span>
-                        </h2>
-                    </div>
-                </div>
-                <div class="col-auto wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="sec-btn">
-                        <div class="icon-box style2">
-                            <button data-slick-prev="#teamSlide1" class="slick-arrow default"><i class="fat fa-long-arrow-left"></i></button>
-                            <button data-slick-next="#teamSlide1" class="slick-arrow default"><i class="fat fa-long-arrow-right"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row th-carousel" id="teamSlide1" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="2">
-                <!-- Single Item -->
-                <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="team-card style2">
-                        <p class="team-desig">Architecture Designer</p>
-                        <h3 class="h5 team-title"><a href="#">Kevin Martin</a></h3>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="team-img">
-                            <img src="/assets/img/team/team_1_1.jpg" alt="Team">
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-card style2">
-                        <p class="team-desig">Interior Designer</p>
-                        <h3 class="h5 team-title"><a href="#">Jonas Malini</a></h3>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="team-img">
-                            <img src="/assets/img/team/team_1_2.jpg" alt="Team">
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="team-card style2">
-                        <p class="team-desig">3D Autocad Designer</p>
-                        <h3 class="h5 team-title"><a href="#">Aiden Samuel</a></h3>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="team-img">
-                            <img src="/assets/img/team/team_1_3.jpg" alt="Team">
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-card style2">
-                        <p class="team-desig">Interior Designer</p>
-                        <h3 class="h5 team-title"><a href="#">Andrew Maria</a></h3>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="team-img">
-                            <img src="/assets/img/team/team_1_4.jpg" alt="Team">
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="team-card style2">
-                        <p class="team-desig">3D Autocad Designer</p>
-                        <h3 class="h5 team-title"><a href="#">Joseph Carter</a></h3>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="team-img">
-                            <img src="/assets/img/team/team_1_5.jpg" alt="Team">
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Item -->
-                <div class="col-md-6 col-xl-4 wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-card style2">
-                        <p class="team-desig">Interior Designer</p>
-                        <h3 class="h5 team-title"><a href="#">Andrew Adrian</a></h3>
-                        <div class="th-social">
-                            <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                            <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="team-img">
-                            <img src="/assets/img/team/team_1_6.jpg" alt="Team">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
-<!--==============================
-Counter Area  
-==============================-->
-{{-- <section class="space-bottom">
-      <div class="container">
-          <div class="row justify-content-center">
-              <div class="col-xxl-10">
-                  <div class="row align-items-center">
-                      <div class="col-auto wow fadeInUp" data-wow-delay="0.1s">
-                          <span class="big-title mb-4 mb-md-0">AR.</span>
-                      </div>
-                      <div class="col-auto">
-                          <div class="counter-card-wrap">
-                              <div class="counter-card wow fadeInUp" data-wow-delay="0.2s">
-                                  <h3 class="counter-card_number"><span class="counter-number">600</span></h3>
-                                  <p class="counter-card_text">Projects</p>
-                              </div>
-                              <div class="counter-card wow fadeInUp" data-wow-delay="0.3s">
-                                  <h3 class="counter-card_number"><span class="counter-number">60</span></h3>
-                                  <p class="counter-card_text">Employees</p>
-                              </div>
-                              <div class="counter-card wow fadeInUp" data-wow-delay="0.4s">
-                                  <h3 class="counter-card_number"><span class="counter-number">200</span></h3>
-                                  <p class="counter-card_text">Conractors</p>
-                              </div>
-                              <div class="counter-card wow fadeInUp" data-wow-delay="0.5s">
-                                  <h3 class="counter-card_number"><span class="counter-number">10000</span></h3>
-                                  <p class="counter-card_text">More Then Publications in The World Press</p>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section> --}}
-
-@elseif($parent_menu_id->layout_name == 'SERVICES')
-
-<section class="space-top">
-    <div class="container">
-        <div class="row">
-
-	   <div class="col-xl-12 col-lg-12 align-self-center wow fadeInRight" data-wow-delay="0.2s">
-                <div class="page-single">
-                    {{-- <div class="page-img">
-                        <img class="w-100" src="{{@$dynamic_contents->image}}" alt="Service Image">
-                    </div> --}}
-                    <h2 class="sec-title mb-40">
-                    <span class="text-theme">{{@$dynamic_contents->title}}</span>
-                    </h2>
-                    <div class="service-content">
-
-                        {!! removeExtraChar(@$dynamic_contents->body) !!}
-
-                    </div>
-                </div>
-
-            </div>
-
-            @foreach(@$services as $service)
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-card">
-                    <div class="service-card_icon">
-                        <img class="svg-img" src="{{@$service->image}}" alt="service image">
-                    </div>
-                    {{-- <p class="service-card_num">0{{@$key+1}}</p> --}}
-                    <a href="{{route('service-detail',[@$service->subMenu->slug])}}">
-                        <h3 class="service-card_title">{{@$service->title}}</h3>
-                    </a>
-                    <p class="service-card_text">{{@$service->excerpt}}</p>
-                </div>
-            </div>
-            @endforeach
-
-            {{-- <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-card">
-                    <div class="service-card_icon">
-                        <img class="svg-img" src="assets/img/icon/service_1_1.svg" alt="service image">
-                    </div>
-                    <p class="service-card_num">01</p>
-                    <h3 class="service-card_title">Architecture</h3>
-                    <p class="service-card_text">We see architecture as the composition of all elements that define a particular space and inform the character of a building.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="service-card">
-                    <div class="service-card_icon">
-                        <img class="svg-img" src="assets/img/icon/service_1_2.svg" alt="service image">
-                    </div>
-                    <p class="service-card_num">02</p>
-                    <h3 class="service-card_title">Interior Design</h3>
-                    <p class="service-card_text">In Order architecture as the composition of all elements that define a particular space and inform the character of a interior.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-card">
-                    <div class="service-card_icon">
-                        <img class="svg-img" src="assets/img/icon/service_1_3.svg" alt="service image">
-                    </div>
-                    <p class="service-card_num">03</p>
-                    <h3 class="service-card_title">Urban Interventions</h3>
-                    <p class="service-card_text">The Urban architecture as the composition of all elements that define a particular space and inform the character of into.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                <div class="service-card">
-                    <div class="service-card_icon">
-                        <img class="svg-img" src="assets/img/icon/service_1_4.svg" alt="service image">
-                    </div>
-                    <p class="service-card_num">04</p>
-                    <h3 class="service-card_title">Landscape Design</h3>
-                    <p class="service-card_text">The Best architecture as composition of all elements that define a particular space and inform the character of a Landscape.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.5s">
-                <div class="service-card">
-                    <div class="service-card_icon">
-                        <img class="svg-img" src="assets/img/icon/service_1_5.svg" alt="service image">
-                    </div>
-                    <p class="service-card_num">05</p>
-                    <h3 class="service-card_title">Interdisciple Entity</h3>
-                    <p class="service-card_text">You see architecture as the composition of all elements that define a particular space and inform the character of a Gowring.</p>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.6s">
-                <div class="service-card">
-                    <div class="service-card_icon">
-                        <img class="svg-img" src="assets/img/icon/service_1_6.svg" alt="service image">
-                    </div>
-                    <p class="service-card_num">06</p>
-                    <h3 class="service-card_title">Safety Guard Everything</h3>
-                    <p class="service-card_text">Safety Guard is architecture as the composition of all elements that define a particular space and inform the character of Design.</p>
-                </div>
-            </div> --}}
-
-
+                <ul class="bread-crumb">
+                    <li><a href="{{route('home')}}">Home</a></li>
+                    <li>
+                        @if(@$child_menu_id->name) 
+                            {{ @$child_menu_id->name }} 
+                        @elseif(@$sub_menu_id->name) 
+                            {{ @$sub_menu_id->name }} 
+                        @else 
+                            {{ @$parent_menu_id->name }} 
+                        @endif
+                    </li>
+                </ul>
+            </div>                    
         </div>
     </div>
 </section>
+
+
+
+
+@if($parent_menu_id->layout_name == 'ABOUT')
+
+  <!-- Welcome Section Three -->
+  <section class="welcome-section-three">
+        <div class="auto-container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="image-wrapper">
+                        <div class="image-one wow fadeInUp" data-wow-duration="1500ms">
+                            <img src="assets/images/resource/image-8.jpg" alt="">
+                            <div class="experience-years">
+                                <div class="icon"><span class="fab fa-twitter"></span></div>
+                                <h4>36 Years of <br> Expericence</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-side">
+                        <div class="sec-title mb-40">
+                            <div class="sub-title">Welcome to Welbim</div>
+                            <h2>We’re Committed <br> To quality</h2>
+                        </div>
+                        <div class="text mb-35">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. quis nostrud exercitation.</div>
+                        <div class="bottom-content">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="list">
+                                        <li>We provide 24/7 service</li>
+                                        <li>We strick to deadline</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="list">
+                                        <li>We offer upfront pricing</li>
+                                        <li>We use latest technology</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="progress-levels">
+                                <!--Skill Box-->
+                                <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
+                                    <h5>Welding</h5>
+                                    <div class="inner">
+                                        <div class="bar">
+                                            <div class="bar-innner"><div class="bar-fill" data-percent="91"><div class="percent"></div></div></div>
+                                        </div>                                
+                                    </div>
+                                </div>
+                                <!--Skill Box-->
+                                <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
+                                    <h5>Metal Work</h5>
+                                    <div class="inner">
+                                        <div class="bar">
+                                            <div class="bar-innner"><div class="bar-fill" data-percent="78"><div class="percent"></div></div></div>
+                                        </div>                                
+                                    </div>
+                                </div>
+                                <!--Skill Box-->
+                                <div class="progress-box wow fadeIn" data-wow-delay="100ms" data-wow-duration="1500ms">
+                                    <h5>Steel Weld</h5>
+                                    <div class="inner">
+                                        <div class="bar">
+                                            <div class="bar-innner"><div class="bar-fill" data-percent="64"><div class="percent"></div></div></div>
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Logo Section -->
+    <section class="clients-logo-section">
+        <div class="auto-container">
+            <!--Sponsors Carousel-->
+            <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 40, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 300, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "2" }, "768" :{ "items" : "3" } , "992":{ "items" : "4" }, "1200":{ "items" : "5" }}}'>
+                <div class="slide-item"><div class="image"><img src="assets/images/resource/clients-logo-1.png" alt=""></div></div>
+                <div class="slide-item"><div class="image"><img src="assets/images/resource/clients-logo-2.png" alt=""></div></div>
+                <div class="slide-item"><div class="image"><img src="assets/images/resource/clients-logo-3.png" alt=""></div></div>
+                <div class="slide-item"><div class="image"><img src="assets/images/resource/clients-logo-4.png" alt=""></div></div>
+                <div class="slide-item"><div class="image"><img src="assets/images/resource/clients-logo-5.png" alt=""></div></div>
+            </div>
+        </div>
+    </section>
+
+
+<!-- Service details -->
+<section class="service-details">
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="content-side">
+                   
+                    <h2>Metal Work</h2>
+                    <div class="text">
+                        <p>Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Aelltes port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the ndustry standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <p>It has survived not only five centuries. Lorem Ipsum is simply dummy text of the new design printng and type setting Ipsum take a look at our round. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.</p>
+                    </div>
+                    <div class="row mb-30">
+                        <div class="col-md-6">
+                            <div class="image"><img src="assets/images/resource/image-16.jpg" alt=""></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="image"><img src="assets/images/resource/image-17.jpg" alt=""></div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            <aside class="col-lg-4 sidebar service-sidebar">
+                <div class="widget consult-widget">
+                    <div class="icon"><span class="fab fa-twitter"></span></div>
+                    <div class="text">Contact with <br> us for any <br> project</div>
+                    <div class="phone"><a href="tel:928886660000">92 888 666 0000</a></div>
+                </div>
+            </aside>
+        </div>                        
+    </div>
+</section>
+
+
+
+
+
+
+    <!-- Testimonials section two -->
+    <section class="testimonials-section-two style-two" style="background-image: url(assets/images/resource/map.png)">
+        <div class="auto-container">
+            <div class="sec-title text-center">
+                <div class="sub-title text-center">Testimonials</div>
+                <h2>What they say</h2>
+            </div>
+            <div class="row">
+                <div class="theme_carousel owl-theme owl-carousel" data-options='{"loop": true, "margin": 0, "autoheight":true, "lazyload":true, "nav": true, "dots": true, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 1000, "responsive":{ "0" :{ "items": "1" }, "600" :{ "items" : "1" }, "768" :{ "items" : "2" } , "992":{ "items" : "2" }, "1200":{ "items" : "3" }}}'>
+                    <div class="testimonial-block-two">
+                        <div class="inner-box">                            
+                            <div class="text">There are many variations of passage of lorem ipsum but the majority alteration in some form, by rando mised words noted digital simply look.
+                            </div>
+                            <h4>Jessica Brown <span>Co-Founder</span></h4>
+                            <div class="author-thumb">
+                                <img src="assets/images/resource/author-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-block-two">
+                        <div class="inner-box">                            
+                            <div class="text">There are many variations of passage of lorem ipsum but the majority alteration in some form, by rando mised words noted digital simply look.
+                            </div>
+                            <h4>John Smith  <span>Co-Founder</span></h4>
+                            <div class="author-thumb">
+                                <img src="assets/images/resource/author-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-block-two">
+                        <div class="inner-box">                            
+                            <div class="text">There are many variations of passage of lorem ipsum but the majority alteration in some form, by rando mised words noted digital simply look.
+                            </div>
+                            <h4>Christine eve <span>Co-Founder</span></h4>
+                            <div class="author-thumb">
+                                <img src="assets/images/resource/author-3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End -->
+                </div>
+            </div>            
+        </div>
+    </section>
+
+
+
+    <!-- Team Section -->
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="auto-container">
+            <div class="wrapper-box">
+                <h3>Looking for a quality and <br>affordable project?</h3>
+                <div class="link">
+                    <a href="#" class="theme-btn btn-style-one"><span>Contact With Us</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+		
+		
+
+@elseif($parent_menu_id->layout_name == 'SERVICES')
+
+<!-- Services Section -->
+<section class="services-section style-two">
+
+
+
+        <div class="auto-container">
+            <div class="row">
+            @foreach(@$services as $service)
+                <div class="col-lg-4 col-md-6 service-block">
+                    <div class="inner-box">
+                        <div class="image"><span class="border-shape"></span><img src="{{@$service->image}}" alt=""></div>
+                        <div class="content">
+                            <h3><a href="{{route('service-detail',[@$service->subMenu->slug])}}"> {{@$service->title}}</a></h3>
+                            <div class="text">{{@$service->excerpt}}</div>
+                            <div class="link">
+                                <a href="{{route('service-detail',[@$service->subMenu->slug])}}" class="theme-btn btn-style-one"><span>Read More</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
     <!--==============================
 Job Area  
 ==============================-->

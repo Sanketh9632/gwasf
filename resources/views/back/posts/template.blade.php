@@ -814,7 +814,31 @@ primary
  var title1 = '{{$title1}}';
  var title2 = '{{$title2}}';
 
- CKEDITOR.replace('body', {customConfig: 'https://cdn.ckeditor.com/ckeditor5/27.0.0/inline/ckeditor.js'})
+
+ CKEDITOR.replace('body', {
+    // customConfig: 'https://cdn.ckeditor.com/ckeditor5/27.0.0/inline/ckeditor.js',
+    
+    allowedContent: true, // Disable filtering, allow all HTML tags and attributes
+    extraAllowedContent: '{}()[]', // Allow all elements, attributes, styles, and classes
+
+    // Optional: Disable automatic <p> wrapping
+    autoParagraph: false,
+
+    // Disable basic styling conversions like bold, italic, etc.
+    basicEntities: false,
+
+    // Optional: Disable Advanced Content Filter (ACF) completely
+    //removePlugins: 'elementspath,sourcearea', // Removes element path and source mode if needed
+
+    // Prevent CKEditor from cleaning up empty elements
+    ignoreEmptyParagraph: false,
+    on: {
+        instanceReady: function() {
+            // Prevent CKEditor from removing empty <i> elements
+            CKEDITOR.dtd.$removeEmpty['i'] = false;
+        }
+    }
+});
 
  CKEDITOR.replace('body1', {customConfig: 'https://cdn.ckeditor.com/ckeditor5/27.0.0/inline/ckeditor.js'})
 

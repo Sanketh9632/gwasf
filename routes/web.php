@@ -28,7 +28,7 @@ Route::get('blog/category/{category_id?}', [PostController::class, 'getAllNewsFi
 
 Route::get('blog/{news_slug}', [PostController::class, 'getNewsInDetail'])->name('blog-detail');
 
-Route::get('services/{slug}', [PostController::class, 'getServiceDetail'])->name('service-detail');
+Route::get('services/{slug}/{child_slug?}', [PostController::class, 'getServiceDetail'])->name('service-detail');
 
 Route::get('contact-us', [PostController::class, 'contactUs'])->name('contact-us');
 

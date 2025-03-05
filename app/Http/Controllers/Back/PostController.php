@@ -156,7 +156,7 @@ class PostController extends Controller
 
        $parent_menus = ParentMenu::where('status','Active')->where('post_entry','Y')->pluck('name','id')->prepend('--Select--','');
 
-       $actual_parent_slug = $post->mainMenu->slug;
+       $actual_parent_slug = @$post->mainMenu->slug;
 
        $actual_sub_slug = @$post->subMenu->slug;
 

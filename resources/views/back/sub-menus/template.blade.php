@@ -86,7 +86,7 @@
     </div>
     @endcomponent
 
-          {{-- @component('back.components.box')
+          @component('back.components.box')
             @slot('type')
                 primary
             @endslot
@@ -104,9 +104,9 @@
 
 
         </div>
-        @endcomponent --}}
+        @endcomponent
 
-        <input type="hidden" name="child_menu" value="N">
+        {{-- <input type="hidden" name="child_menu" value="N"> --}}
 
         @component('back.components.box')
         @slot('type')

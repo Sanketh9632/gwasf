@@ -9,3 +9,7 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.uiColor = '#AADC6E';
 	 config.youtube = 'youtube';
 };
+
+CKEDITOR.replace('editor', {
+    extraAllowedContent: 'i(*){*};span(*){*}'
+});

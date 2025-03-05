@@ -18,7 +18,7 @@
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
 <div class="container th-container2">
-    <div class="breadcumb-wrapper  " data-bg-src="storage/files/Bread/Services.jpg">
+    <div class="breadcumb-wrapper  " data-bg-src="storage/files/Bread/Blog.jpg">
         <h1 class="breadcumb-title">Contact Us</h1>
         <ul class="breadcumb-menu">
             <li><a href="{{route('home')}}">Home</a></li>
@@ -65,7 +65,7 @@
                 <div class="widget footer-widget rests">
                     <h4 class="widget_title">Visit</h4>
                     <h6 class="footer-info">
-                        <a class="link" href="#">{{@$address->address}}</a>
+                        <a class="link" href="#">{!! @$address->address !!}</a>
                     </h6>
                 </div>
             </div>
@@ -87,25 +87,25 @@
                     @csrf
                         <div class="row">
                             <div class="form-group col-12">
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Your Name" Required="">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="number" class="form-control" name="phone" id="number" placeholder="Your Number">
+                                <input type="number" class="form-control" name="phone" id="number" placeholder="Your Number" Required="">
                             </div>
                             <div class="form-group col-md-6">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" Required="">
                             </div>
                             <div class="form-group col-12">
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email Address" Required="">
                             </div>
                             <div class="form-group col-12">
-                                <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
+                                <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Message" Required=""></textarea>
                             </div>
                             <div class="form-group col-12">
-                              <div class="cf-turnstile" data-sitekey="{{ config('app.cf_site_key') }}" data-theme="light"></div>
+                              <div class="cf-turnstile" data-sitekey="{{ config('app.cf_site_key') }}" data-theme="light" Required=""></div>
                             </div>
                             <div class="form-btn col-12 mt-10">
-                                <button class="th-btn" type="submit"><span class="line left"></span> Message Us <span class="line"></span></button>
+                                <button class="th-btn" type="submit"><span class="line left"></span>Send<span class="line"></span></button>
                             </div>
                         </div>
                         <p class="form-messages mb-0 mt-3"></p>
@@ -113,7 +113,7 @@
                 </div>
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
                     <div class="contact-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d764276.2682042114!2d10.050691296133929!3d51.00769244133826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479a721ec2b1be6b%3A0x75e85d6b8e91e55b!2sGermany!5e0!3m2!1sen!2sbd!4v1695286031738!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
+                       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.8499024406738!2d55.37741347271263!3d25.275634179168563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5ddc9bdddd6b%3A0x4533978975c7c0e8!2sSafety%20Gard%20Dubai!5e0!3m2!1sen!2sin!4v1716541967813!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>

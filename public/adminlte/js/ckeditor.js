@@ -17,3 +17,4 @@ CKEDITOR.editorConfig = function( config ) {
         { name: 'colors' }
     ]
 }
+

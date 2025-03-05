@@ -180,7 +180,7 @@ desired effect
 
           <li><a href="{{ route('sub-menus.index') }}"><i class="fa fa-bars "></i> <span>@lang('Sub Menu')</span></a></li>
 
-          {{-- <li><a href="{{ route('child-menus.index') }}"><i class="fa fa-minus-square-o"></i> <span>@lang('Child Menu')</span></a></li> --}}
+          <li><a href="{{ route('child-menus.index') }}"><i class="fa fa-minus-square-o"></i> <span>@lang('Child Menu')</span></a></li>
 
           {{-- <li><a href="{{ route('sub-child-menus.index') }}"><i class="fa fa-minus-square"></i> <span>@lang('Sub Child Menu')</span></a></li> --}}
 

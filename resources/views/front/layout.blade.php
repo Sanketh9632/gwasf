@@ -1,309 +1,411 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>@yield('title')</title>
-    <meta name="author" content="Themeholy">
-    <meta name="robots" content="INDEX,FOLLOW">
-    @yield('meta')
-    <!-- Mobile Specific Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Favicons - Place favicon.ico in the root directory -->
-    <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/assets/img/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/assets/img/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-
-    <!--==============================
-	  Google Fonts
-	============================== -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@100;200;300;400;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!--==============================
-	    All CSS File
-	============================== -->
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Fontawesome Icon -->
-    <link rel="stylesheet" href="/assets/css/fontawesome.min.css">
-    <!-- Magnific Popup -->
-    <link rel="stylesheet" href="/assets/css/magnific-popup.min.css">
-    <!-- Slick Slider -->
-    <link rel="stylesheet" href="/assets/css/slick.min.css">
-    <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="/assets/css/style.css">
+@yield('meta')
+<meta charset="utf-8">
+<title>@yield('title')</title>
+<!-- Stylesheets -->
 @yield('css')
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<!-- Responsive File -->
+<link href="assets/css/responsive.css" rel="stylesheet">
+<!-- Color File -->
+<link href="assets/css/color.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.png" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 
-<body class="">
+<body>
 
-<!--[if lte IE 9]>
-    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
+<div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="loader-wrap">
+        <div class="preloader"><div class="preloader-close">Preloader Close</div></div>
+        <div class="layer layer-one"><span class="overlay"></span></div>
+        <div class="layer layer-two"><span class="overlay"></span></div>        
+        <div class="layer layer-three"><span class="overlay"></span></div>        
+    </div>
 
-    <!--********************************
-   		Code Start From Here 
-	******************************** -->
-
-    <!--==============================
-     Preloader
-  ==============================-->
-    <div class="preloader">
-        <button class="th-btn style3 preloaderCls">Safety Gard</button>
-        <div class="preloader-inner">
-            <span class="loader"></span>
+    <!-- Main Header -->
+    <header class="main-header header-style-one">
+    <!-- Header Top -->
+    <div class="header-top">
+        <div class="auto-container">
+            <div class="inner-container">
+                <div class="left-column">
+                    <ul class="contact-info">
+                        <li><a href="mailto:needhelp@company.com"><i class="flaticon-email-1"></i>needhelp@company.com</a></li>
+                        <li><a href="tel:928886660000"><i class="flaticon-telephone"></i>92 888 666 0000</a></li>
+                        <li><i class="flaticon-pin"></i>80 Golden Street USA</li>
+                    </ul>
+                </div>
+                <div class="right-column">
+                    <ul class="social-icon">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="th-cursor"></div><!--==============================
-    Mobile Menu
-  ============================== -->
-    <div class="th-menu-wrapper">
-        <div class="th-menu-area text-center">
-            <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
-            <div class="mobile-logo">
-                <a href="{{route('home')}}"><img src="/assets/img/logo.png" alt="Safety Guard"></a>
-            </div>
-            <div class="th-mobile-menu">
-                <ul>
-                @foreach($parent_menu->where('display_menu','Y')->where('status', 'Active') as $main_menu)
-                @if($main_menu->sub_menu == 'Y' && $main_menu->submenus->count() !== 0)
 
-                    <li class="menu-item-has-children"><a href="{{ route('dynamicpage',[$main_menu->slug]) }}">{{ $main_menu->name }} </a>
-                    <ul class="sub-menu">
-                    @foreach($main_menu->submenus as $main_sub_menu)
-                    @if(@$main_sub_menu->link_active)
-                        <li><a href="{{@$main_sub_menu->link}}" target="_blank">{{ $main_sub_menu->name }}</a></li>
-                    @else
-                        @if($main_sub_menu->child_menu == 'Y' && $main_sub_menu->childmenus->count() !== 0)
-                        <li class="menu-item-has-children"><a href="{{ route('dynamicpage',[$main_menu->slug, $main_sub_menu->slug])}}">{{ $main_sub_menu->name }} </a>
-                        <ul class="sub-menu">
-                            @foreach($main_sub_menu->childmenus as $main_child_menu)
-                            @if(@$main_child_menu->link_active)
-                            <li><a href="{{@$main_child_menu->link}}" target="_blank">{{ $main_child_menu->name }}</a></li>
-                            @else
-                            <li><a href="{{ route('dynamicpage',[$main_menu->slug, $main_sub_menu->slug, $main_child_menu->slug]) }}">{{ $main_child_menu->name }}</a></li>
-                            @endif
+    <!-- Header Upper -->
+    <div class="header-upper">
+        <div class="auto-container">
+            <div class="inner-container">
+                <!--Logo-->
+                <div class="logo-box">
+                    <div class="logo"><a href="{{route('home')}}"><img src="/assets/images/logo.png" alt="GWASF"></a></div>
+                </div>
+                <div class="right-column">
+                    <!--Nav Box-->
+                    <div class="nav-outer">
+                        <!--Mobile Navigation Toggler-->
+                        <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt=""></div>
+
+                        <!-- Main Menu -->
+                        <nav class="main-menu navbar-expand-md navbar-light">
+    <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+        <ul class="navigation">
+            <!-- Home link -->
+            <li class="{{ request()->routeIs('home') ? 'current-menu-item' : '' }}">
+                <a href="{{ route('home') }}">Home</a>
+            </li>
+
+            <!-- Dynamic Menus -->
+            @foreach($parent_menu->where('display_menu', 'Y')->where('status', 'Active') as $main_menu)
+                @if($main_menu->sub_menu == 'Y' && $main_menu->submenus->count() !== 0)
+                    <li class="dropdown {{ request()->is($main_menu->slug) ? 'current-menu-item' : '' }}">
+                        <a href="{{ route('dynamicpage', [$main_menu->slug]) }}">{{ $main_menu->name }}</a>
+                        <ul>
+                            @foreach($main_menu->submenus as $submenu)
+                                @if($submenu->sub_menu == 'Y' && $submenu->submenus->count() !== 0)
+                                    <li class="dropdown">
+                                        <a href="{{ route('dynamicpage', [$main_menu->slug, $submenu->slug]) }}">{{ $submenu->name }}</a>
+                                        <ul>
+                                            @foreach($submenu->submenus as $childmenu)
+                                                <li>
+                                                    <a href="{{ route('dynamicpage', [$main_menu->slug, $submenu->slug, $childmenu->slug]) }}">{{ $childmenu->name }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                @else
+                                    <li>
+                                        <a href="{{ route('dynamicpage', [$main_menu->slug, $submenu->slug]) }}">{{ $submenu->name }}</a>
+                                    </li>
+                                @endif
                             @endforeach
                         </ul>
                     </li>
-                    @else
-                    <li><a href="{{ route('dynamicpage',[$main_menu->slug, $main_sub_menu->slug]) }}">{{ $main_sub_menu->name }}</a>
+                @else
+                    <li class="{{ request()->is($main_menu->slug) ? 'current-menu-item' : '' }}">
+                        <a href="{{ route('dynamicpage', [$main_menu->slug]) }}">{{ $main_menu->name }}</a>
                     </li>
-                    @endif
-                    @endif
-                    @endforeach
-                </ul>
-            </li>
-            @else
-            <li><a href="{{ route('dynamicpage',[$main_menu->slug]) }}">{{ $main_menu->name }}</a></li>
-            @endif
+                @endif
             @endforeach
-                </ul>
+        </ul>
+    </div>
+</nav>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!--==============================
-	Header Area
-==============================-->
-    <header class="th-header header-layout4">
-        <div class="header-top">
-            <div class="th-social">
-                <a target="_blank" href="tel:+971526523388">+971526523388</a>
-                 <a target="_blank" href="mailto:safetygard520@gmail.com">safetygard520@gmail.com</a>
-    </div>
-</div>
-        <div class="sticky-wrapper">
-            <div class="sticky-active">
-                <!-- Main Menu Area -->
-                <div class="menu-area">
-                    <div class="container">
-                        <div class="row align-items-center justify-content-between">
-                            <div class="col-auto">
-                                <div class="header-logo">
-                                    <a href="{{route('home')}}"><img src="/assets/img/logo.png" alt="Safety Guard"></a>
-                                </div>
-                            </div>
-                            <div class="col-auto">
-                                <nav class="main-menu d-none d-lg-inline-block">
-                                    <ul>
+    <!--End Header Upper-->
 
-                                    @foreach($parent_menu->where('display_menu','Y')->where('status', 'Active') as $main_menu)
-                                    @if($main_menu->sub_menu == 'Y' && $main_menu->submenus->count() !== 0)
+    <!-- Sticky Header -->
+    <div class="sticky-header">
+        <div class="header-upper">
+            <div class="auto-container">
+                <div class="inner-container">
+                    <!--Logo-->
+                    <div class="logo-box">
+                        <div class="logo"><a href="{{route('home')}}"><img src="/assets/images/logo.png" alt="GWASF"></a></div>
+                    </div>
+                    <div class="right-column">
+                        <!--Nav Box-->
+                        <div class="nav-outer">
+                            <!--Mobile Navigation Toggler-->
+                            <div class="mobile-nav-toggler"><img src="assets/images/icons/icon-bar-2.png" alt=""></div>
 
-                                        <li class="menu-item-has-children"><a href="{{ route('dynamicpage',[$main_menu->slug]) }}">{{ $main_menu->name }} </a>
-                                        <ul class="sub-menu">
-                                        @foreach($main_menu->submenus as $main_sub_menu)
-							            @if(@$main_sub_menu->link_active)
-                                            <li><a href="{{@$main_sub_menu->link}}" target="_blank">{{ $main_sub_menu->name }}</a></li>
-							            @else
-                                            @if($main_sub_menu->child_menu == 'Y' && $main_sub_menu->childmenus->count() !== 0)
-                                            <li class="menu-item-has-children"><a href="{{ route('dynamicpage',[$main_menu->slug, $main_sub_menu->slug])}}">{{ $main_sub_menu->name }} </a>
-                                            <ul class="sub-menu">
-                                                @foreach($main_sub_menu->childmenus as $main_child_menu)
-								                @if(@$main_child_menu->link_active)
-								                <li><a href="{{@$main_child_menu->link}}" target="_blank">{{ $main_child_menu->name }}</a></li>
-								                @else
-                                                <li><a href="{{ route('dynamicpage',[$main_menu->slug, $main_sub_menu->slug, $main_child_menu->slug]) }}">{{ $main_child_menu->name }}</a></li>
-								                @endif
-                                                @endforeach
-                                            </ul>
-                                        </li>
-                                        @else
-                                        <li><a href="{{ route('dynamicpage',[$main_menu->slug, $main_sub_menu->slug]) }}">{{ $main_sub_menu->name }}</a>
-                                        </li>
-                                        @endif
-                                        @endif
-                                        @endforeach
-                                    </ul>
-                                </li>
-                                @else
-                                <li><a href="{{ route('dynamicpage',[$main_menu->slug]) }}">{{ $main_menu->name }}</a></li>
-                                @endif
-                                @endforeach
-
-                                    </ul>
-                                </nav>
-                                <button type="button" class="th-menu-toggle d-inline-block d-lg-none"><i class="far fa-bars"></i></button>
-                            </div>
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-md navbar-light"></nav>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <!--==============================
-    Hero Area
-    ==============================-->
+    </div>
+    <!-- End Sticky Menu -->
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="menu-backdrop"></div>
+        <div class="close-btn"><span class="icon flaticon-remove"></span></div>
+
+        <nav class="menu-box">
+    <div class="nav-logo">
+        <a href="{{route('home')}}"><img src="/assets/images/decor-logo.png" alt=""></a>
+    </div>
+    <div class="menu-outer">
+        <ul>
+            <li class="{{ request()->routeIs('home') ? 'current-menu-item' : '' }}">
+                <a href="{{route('home')}}">Home</a>
+            </li>
+            @foreach($parent_menu->where('display_menu', 'Y')->where('status', 'Active') as $main_menu)
+                <li class="menu-item-has-children {{ request()->is($main_menu->slug.'*') ? 'current-menu-item current-menu-ancestor' : '' }}">
+                    <a href="{{ route('dynamicpage', [$main_menu->slug]) }}">{{ $main_menu->name }}</a>
+                    @if($main_menu->sub_menu == 'Y' && $main_menu->submenus->count() !== 0)
+                        <ul>
+                            @foreach($main_menu->submenus as $submenu)
+                                @if($submenu->sub_menu == 'Y' && $submenu->submenus->count() !== 0)
+                                    <li class="menu-item-has-children {{ request()->is($main_menu->slug.'/'.$submenu->slug.'*') ? 'current-menu-item current-menu-ancestor' : '' }}">
+                                        <a href="{{ route('dynamicpage', [$main_menu->slug, $submenu->slug]) }}">{{ $submenu->name }}</a>
+                                        <ul>
+                                            @foreach($submenu->submenus as $childmenu)
+                                                <li class="{{ request()->is($main_menu->slug.'/'.$submenu->slug.'/'.$childmenu->slug.'*') ? 'current-menu-item' : '' }}">
+                                                    <a href="{{ route('dynamicpage', [$main_menu->slug, $submenu->slug, $childmenu->slug]) }}">{{ $childmenu->name }}</a>
+                                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
+                                @else
+                                    <li class="{{ request()->is($main_menu->slug.'/'.$submenu->slug.'*') ? 'current-menu-item' : '' }}">
+                                        <a href="{{ route('dynamicpage', [$main_menu->slug, $submenu->slug]) }}">{{ $submenu->name }}</a>
+                                    </li>
+                                @endif
+                            @endforeach
+                        </ul>
+                    @endif
+                </li>
+            @endforeach
+        </ul>
+    </div>
+
+    <!--Social Links-->
+    <div class="social-links">
+        <ul class="clearfix">
+            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+            <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+            <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+        </ul>
+    </div>
+</nav>
+
+
+    </div>
+    <!-- End Mobile Menu -->
+
+    <div class="nav-overlay">
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+    </div>
+</header>
+
+    <!-- End Main Header -->
+
+    <!--Search Popup-->
+    <div id="search-popup" class="search-popup">
+        <div class="close-search theme-btn"><span class="flaticon-remove"></span></div>
+        <div class="popup-inner">
+            <div class="overlay-layer"></div>
+            <div class="search-form">
+                <form method="post" action="index.html">
+                    <div class="form-group">
+                        <fieldset>
+                            <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
+                            <input type="submit" value="Search Now!" class="theme-btn">
+                        </fieldset>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
 
     @yield('main')
 
-    <footer class="footer-wrapper footer-layout2">
-    <div class="widget-area">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="widget footer-widget">
-                        <div class="logo flogo">
-                            <img src="/assets/img/logo.png" alt="Safety Guard">
-			<p>Your trusted source for superior window <br>
-			 tinting solutions for homes and businesses in Dubai.<br> 
-			 We elevate your space with style, comfort, and protection.</p>
+
+
+ <!--Main Footer-->
+ <footer class="main-footer" style="background-image: url(assets/images/background/bg-5.jpg);">
+        <div class="upper-box">
+            <div class="auto-container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget about-widget">
+                            <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt=""></a></div>
+                            <div class="text">Lorem ipsum dolor sit amet, consect etur adi pisicing elit sed do eiusmod tempor incididunt ut labore et.</div>
+                            <div class="link-box">
+                                <a href="#" class="theme-btn btn-style-one"><span>Contact Us</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget links-widget">
+                            <h4 class="widget_title">Links</h4>
+                            <div class="widget-content">
+                                <ul class="list">
+                                    <li><a href="#"> About </a></li>
+                                    <li><a href="#">Our Services</a></li>
+                                    <li><a href="#">Latest Projects</a></li>
+                                    <li><a href="#">News & Articles</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget news-widget">
+                            <h4 class="widget_title">Latest News</h4>
+                            <div class="news-widget-wrapper">
+                                <div class="post">
+                                    <div class="image"><a href="blog-details.html"><img src="assets/images/resource/news-4.jpg" alt=""></a></div>
+                                    <div class="content">
+                                        <div class="date">15 Aug, 2020</div>
+                                        <h4><a href="blog-details.html"> We’re creating a Metal <br>Product</a></h4>
+                                    </div>
+                                </div>
+                                <div class="post">
+                                    <div class="image"><a href="blog-details.html"><img src="assets/images/resource/news-5.jpg" alt=""></a></div>
+                                    <div class="content">
+                                        <div class="date">15 Aug, 2020</div>
+                                        <h4><a href="blog-details.html"> We’re creating a Metal <br>Product</a></h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget contact-widget">
+                            <h4 class="widget_title">Contact</h4>
+                            <div class="wrapper-box">
+                                <div class="icon-box">
+                                    <div class="icon"><span class="flaticon-pin"></span></div>
+                                    <div class="text">88 broklyn golden street, New
+                                        York. USA</div>
+                                </div>
+                                <div class="icon-box">
+                                    <div class="icon"><span class="flaticon-email-1"></span></div>
+                                    <div class="text"><a href="mailto:needhelp@company.com">needhelp@company.com</a></div>
+                                </div>                                
+                                <div class="icon-box">
+                                    <div class="icon"><span class="flaticon-telephone"></span></div>
+                                    <div class="text"><a href="tel:926668880000">92 666 888 0000</a></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-			
-                <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="widget footer-widget rest ">
-                        <h4 class="widget_title">call</h4>
-                        <h6 class="footer-info">
-                            <a class="link" href="tel:{{@$address->phone}}">{{@$address->phone}}</a>
-                            {{-- <a class="link" href="tel:+38012456789000">+380 1245 6789 000</a> --}}
-                        </h6>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="widget footer-widget rest">
-                        <h4 class="widget_title">Email</h4>
-                        <h6 class="footer-info">
-                            <a class="link" href="mailto:{{@$address->email}}">{{@$address->email}}</a>
-                            {{--<a class="link" href="mailto:artraz@artrazmail.com">artraz@artrazmail.com</a>--}}
-                        </h6>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-lg-auto wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="widget footer-widget rest">
-                        <h4 class="widget_title">Visit</h4>
-                        <h6 class="footer-info">
-                            <a class="link" href="#">{{@$address->address}}</a>
-                        </h6>
-                    </div>
-                </div>
+            </div> 
+        </div>               
+    </footer>
+    <!--End Main Footer-->
 
-            </div>
+    <div class="footer-bottom">
+        <div class="auto-container">
+            <div class="content">
+                <ul class="social-icon">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <div class="copyright-text">© Copyright 2022 by Company.com</div>
+            </div>            
         </div>
     </div>
-    <div class="copyright-wrap">
-        <div class="container">
-            <div class="row gy-2 align-items-center justify-content-between">
-                <div class="col-auto">
-                    <div class="th-social">
-                        <a target="_blank" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                        <a target="_blank" href="https://skype.com/"><i class="fab fa-skype"></i></a>
-                        <a target="_blank" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                <div class="col-auto">
-                    <p class="copyright-text">Copyright By © <a href="{{route('home')}}">Safety Gard</a> - 2024</p>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</footer>
-
-<!--********************************
-        Code End  Here 
-******************************** -->
-
-<!-- Scroll To Top -->
-<div class="scroll-top">
-    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-    </svg>
+	
 </div>
+<!--End pagewrapper-->
 
+<!--Scroll to top-->
+<div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-right-arrow-4"></span></div>
 
-    <!--********************************
-			Code End  Here 
-	******************************** -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/jquery.fancybox.js"></script>
+<script src="assets/js/isotope.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/lazyload.js"></script>
+<script src="assets/js/scrollbar.js"></script>
+<script src="assets/js/TweenMax.min.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/jquery.polyglot.language.switcher.js"></script>
+<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+<script src="assets/js/parallax-scroll.js"></script>
 
+<script src="assets/js/script.js"></script>
 
-    <!-- Scroll To Top -->
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
-        </svg>
-    </div>
-
-    <!--==============================
-    All Js File
-============================== -->
-    <!-- Jquery -->
-    <script src="/assets/js/vendor/jquery-3.6.0.min.js"></script>
-    <!-- Slick Slider -->
-    <script src="/assets/js/slick.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="/assets/js/bootstrap.min.js"></script>
-    <!-- Magnific Popup -->
-    <script src="/assets/js/jquery.magnific-popup.min.js"></script>
-    <!-- Counter Up -->
-    <script src="/assets/js/jquery.counterup.min.js"></script>
-    <!-- Tilt Js -->
-    <script src="/assets/js/tilt.jquery.min.js"></script>
-    <!-- Wow Animation -->
-    <script src="/assets/js/wow.min.js"></script>
-    <!-- Main Js File -->
-    <script src="/assets/js/main.js"></script>
 
 </body>
-
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+   

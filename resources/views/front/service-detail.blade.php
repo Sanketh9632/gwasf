@@ -1,8 +1,9 @@
 @extends('front.layout')
 
 @section('meta')
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @section('title', ucwords(strtolower((@$dynamic_content['seo_title']))))
-<meta name="author" content="Safety Guard">
+<meta name="author" content="">
 <meta name="description" content="{!! @$dynamic_content['meta_description'] !!}">
 <meta name="keywords" content="{!! @$dynamic_content['meta_keywords'] !!}">
 
@@ -14,143 +15,121 @@
 
 @section('main')
 
-<!-- Breadcrumbs Start -->
-<div class="container th-container2">
-    <div class="breadcumb-wrapper  " data-bg-src="/{{@$dynamic_content->banner_image}}">
-        <h1 class="breadcumb-title">{{@$dynamic_content->title}}</h1>
-        <ul class="breadcumb-menu">
-            <li><a href="{{route('home')}}">Home</a></li>
-            <li>{{@$sub_menu_id->name}}</li>
-        </ul>
-    </div>
-</div>
-<!-- Breadcrumbs End -->
-
-<!-- Project Section Start -->
-<section class="space-top space-extra-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="page-single">
-                    <div class="page-img">
-                        <img class="w-100" src="{{@$dynamic_content->image}}" alt="Service Image">
-                    </div>
-                    <h3 class="single-title">{{@$dynamic_content->excerpt}}</h3>
-                    <div class="service-content">
-
-                        {!! removeExtraChar(@$dynamic_content->body) !!}
-
-                        <div class="row gy-30 mb-40">
-			@if(@$post_tabs)
-			@foreach($post_tabs as $tab)
-			@if($tab->tab_image)
-                            <div class="col-md-12">
-                                <img class="w-100" src="{{@$tab->tab_image}}" alt="image">
-                            </div>
-                            <div class="col-md-12">
-				<h4 class="text-uppercase mb-20">{{@$tab->tab_title}}</h4>
-                                 {!! removeExtraChar(@$tab->tab_body) !!}
-                            </div>
-			@else
-			<div class="col-md-12">
-			<h4 class="text-uppercase mb-20">{{@$tab->tab_title}}</h4>
-				 {!! removeExtraChar(@$tab->tab_body) !!}
-			</div>
-			@endif
-			@endforeach
-			@endif
-                        </div>
-
-                        {{-- <h4 class="text-uppercase mb-20">3 Simple Steps to Process</h4>
-                        <p class="mb-30">Assertively e-enable catalysts for change before fully tested markets. Phosfluorescently maintain wireless scenarios after intermandated applications. Conveniently predominate revolutionary quality vectors through future-proof manufactured products. Enthusiastically transform distinctive collaboration.</p>
-                        <p class="mb-30">Phosfluorescently maintain wireless scenarios after intermandated applications. Conveniently predominate revolutionary quality vectors through future-proof manufactured products.</p>
-                        <div class="row gy-30">
-                            <div class="col-md-6">
-                                <img class="w-100" src="/assets/img/service/service_inner_2.jpg" alt="image">
-                            </div>
-                            <div class="col-md-6">
-                                <img class="w-100" src="/assets/img/service/service_inner_3.jpg" alt="image">
-                            </div>
-                        </div>
-                        <p class="mt-30 mb-n2">Conveniently predominate revolutionary quality vectors through future-proof manufactured products. Objectively envisioneer high in convergence through collaborative networks. Interactively generate B2C tailers for business data restore fully researched relationships through.</p> --}}
+<div id="content" class="site-content">
+            <div class="page-header dtable text-center header-transparent pheader-service-detail1" data-bg-src="/{{@$dynamic_content->banner_image}}">
+                <div class="dcell">
+                    <div class="container">
+                        <h1 class="page-title"><b>{{@$dynamic_content->title}}</b></h1>
+                        <ul id="breadcrumbs" class="breadcrumbs none-style">
+                            <li><a href="index.html"><b>Home</b></a></li>
+                            <li><a href="our-services.html"><b>Our Services</b></a></li>
+                            <li class="active"><b>{{@$dynamic_content->title}}</b></li>
+                        </ul>    
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <aside class="sidebar-area">
-                    <!-- <div class="widget widget_search   ">
-                        <form class="search-form">
-                            <input type="text" placeholder="Search...">
-                            <button type="submit"><i class="far fa-search"></i></button>
-                        </form>
-                    </div>
-                    <div class="widget widget_categories  ">
-                        <h3 class="widget_title">Categories</h3>
-                        <ul>
-                            <li>
-                                <a href="blog.html">Interior Design</a>
-                            </li>
-                            <li>
-                                <a href="blog.html">Architecture</a>
-                            </li>
-                            <li>
-                                <a href="blog.html">Landscape</a>
-                            </li>
-                            <li>
-                                <a href="blog.html">Urban Interventions</a>
-                            </li>
-                            <li>
-                                <a href="blog.html">Interdisciplinary entities</a>
-                            </li>
-                            <li>
-                                <a href="blog.html">Safety Guard Everything</a>
-                            </li>
-                        </ul>
-                    </div> -->
-                    <div class="widget widget_download  ">
-                        <h4 class="widget_title">Download</h4>
-                        <div class="donwload-media-wrap">
-                            <div class="download-media">
-                                <div class="download-media_icon">
-                                    <i class="fal fa-file-pdf"></i>
-                                </div>
-                                <div class="download-media_info">
-                                    <h5 class="download-media_title">Our Brochures</h5>
-                                    <a href="">
-                                        <span class="download-media_text">Download</span>
-                                    </a>
-                                </div>
-                                <a href="/about-us" class="download-media_btn"><i class="far fa-arrow-right"></i></a>
-                            </div>
-                            <div class="download-media">
-                                <div class="download-media_icon">
-                                    <i class="fal fa-file-lines"></i>
-                                </div>
-                                <div class="download-media_info">
-                                    <h5 class="download-media_title">Company Details</h5>
-                                    <span class="download-media_text">Download</span>
-                                </div>
-                                <a href="/about-us" class="download-media_btn"><i class="far fa-arrow-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="widget  ">
-                        <div class="widget-banner">
-                            <h4 class="title" data-bg-src="/assets/img/bg/widget_banner.jpg">Best Architecture <br> <span class="text-transparent">Services</span></h4>
-                            <div class="content">
-                                <a href="+12345678900" class="link"><i class="fas fa-phone"></i>(123) 4567 8900</a>
-                                <p class="text">Monday – Friday: 7:00 am -8:00 pm 24/7 Emergency Service</p>
-                                <a href="/about-us" class="th-btn"><span class="line left"></span> About Us <span class="line"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-            </div>
         </div>
 
-    </div>
-</section>
 
-<!-- Project Section End -->
+        <section class="services-single">
+            <div class="container">
+                <div class="row">
+                    <div class="widget-area col-lg-3 col-md-12 d-none d-sm-block">
+                        <div class="widget widget_nav_menu">
+                            <ul class="services-menu">
+                                <li class="current-menu-item"><a href="servcies-detail-1.html"><span>01.</span> Design & Planning</a></li>
+                                <li><a href="servcies-detail-2.html"><span>02.</span> Exterior Design</a></li>
+                                <li><a href="servcies-detail-3.html"><span>03.</span> Custom Solutions</a></li>
+                                <li><a href="servcies-detail-4.html"><span>04.</span> Furniture & Decor</a></li>
+                                <li><a href="servcies-detail-5.html"><span>05.</span> Creating Concept</a></li>
+                                <li><a href="servcies-detail-6.html"><span>06.</span> Author`s Control</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-12">
+                        <div class="services-detail-content">
+                            <div class="ot-heading ">
+                                <span>[ what we offer ]</span>
+                                <h2 class="main-heading">{{@$dynamic_content->excerpt}}</h2>
+                            </div>
+                            {!! removeExtraChar(@$dynamic_content->body) !!}
+                            <!-- <div class="simple-slide owl-theme owl-carousel">
+                                <div class="item">
+                                    <img src="images/Service-details/servicepage1.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="images/Service-details/servicepage2.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="images/Service-details/servicepage1.png" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="images/Service-details/servicepage2.png" alt="">
+                                </div>
+                            </div> -->
+                            
+                            <!-- <img src="/images/Service-details/middle.jpg" class="detail-img" alt="">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-4 col-md-6 mb-3 mb-lg-0 text-center">
+                                    <div class="circle-progress tbottom" data-color="#939393" data-height="2" data-size="165" data-processed="true">
+                                        <div class="inner-bar" data-percent="">
+                                            <span><span class="percent"><i class="bi bi-badge-3d"></i></span></span>
+                                        </div>
+                                        <h4>3D modeling</h4>
+                                    </div>
+                                    <p>Studio provides a full range<br>of 3D interior modeling</p>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-3 mb-lg-0 text-center">
+                                    <div class="circle-progress tbottom" data-color="#939393" data-height="2" data-size="165" data-processed="true">
+                                        <div class="inner-bar" >
+                                            <span><span class="percent"><i class="bi bi-rulers"></i></span></span>
+                                        </div>
+                                        <h4>ROOM MEASUREMENT</h4>
+                                    </div>
+                                    <p>Development of iperfect design<br>of the project</p>
+                                </div>
+                                <div class="col-lg-4 col-md-6 text-center">
+                                    <div class="circle-progress tbottom" data-color="#939393" data-height="2" data-size="165" data-processed="true">
+                                        <div class="inner-bar" data-percent="">
+                                            <span><span class="percent"><i class="bi bi-bounding-box"></i></span></span>
+                                        </div>
+                                        <h4>2d planning</h4>
+                                    </div>
+                                    <p>We provide 2D planning<br>for great visualization</p>
+                                </div>
+                            </div>
+                           -->
+                           @if(@$post_tabs)
+			@foreach($post_tabs as $tab)
+			@if($tab->tab_image)
+                            <section class="cta bka" data-bg-src="{{@$tab->tab_image}}">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8 mb-0 mb-lg-0">
+                                            <h2 class="text-light mb-0" style="font-size: 2rem;">{{@$tab->tab_title}}</h2>
+                                            <div class="space-5"></div>
+                                            <p class=" mb-0 text-white">{!! removeExtraChar(@$tab->tab_body) !!}</p>
+                                        </div>
+                                        <div class="col-lg-4 text-left text-lg-right align-self-center">
+                                            <div class="ot-button">
+                                                <a href="contact.html" class="octf-btn octf-btn-light border-hover-light">get in touch</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            @endif
+			@endforeach
+			@endif
+
+                            
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+<a id="back-to-top" href="#" class="show"><i class="ot-flaticon-left-arrow"></i></a>       
 
 @endsection
